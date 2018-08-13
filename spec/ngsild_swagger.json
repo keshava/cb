@@ -76,7 +76,7 @@
         "https"
     ],
     "paths": {
-        "/entities": {
+        "/entities/": {
             "get": {
                 "description": "Retrieve a set of entities which matches a specific query from an NGSI-LD system",
                 "operationId": "queryEntities",
@@ -277,7 +277,7 @@
                 }
             }
         },
-        "/entities/{entityId}/attrs": {
+        "/entities/{entityId}/attrs/": {
             "post": {
                 "description": "Append new Entity attributes to an existing Entity within an NGSI-LD system",
                 "operationId": "appendEntityAttrs",
@@ -473,7 +473,7 @@
                 }
             }
         },
-        "/csources": {
+        "/csourceRegistrations/": {
             "post": {
                 "description": "Registers a new context source within an NGSI-LD system",
                 "operationId": "registerCsource",
@@ -599,7 +599,7 @@
                 }
             }
         },
-        "/csources/{registrationId}": {
+        "/csourceRegistrations/{registrationId}": {
             "get": {
                 "description": "Retrieves a specific context source registration from an NGSI-LD system",
                 "operationId": "retrieveCsource",
@@ -711,7 +711,7 @@
                 }
             }
         },
-        "/subscriptions": {
+        "/subscriptions/": {
             "post": {
                 "description": "Creates a new Subscription within an NGSI-LD system",
                 "operationId": "createSubscription",
@@ -895,7 +895,7 @@
                 }
             }
         },
-        "/csourceSubscriptions": {
+        "/csourceSubscriptions/": {
             "post": {
                 "description": "Creates a context source discovery Subscription within an NGSI-LD system",
                 "operationId": "createCSourceSubscription",
