@@ -2,6 +2,11 @@
 
 This repository contains OpenAPI descriptions for the NGSI-LD interface defined by ETSI ISG CIM.
 
+## Online resources
+
+* [Navigate the API in the browser](https://forge.etsi.org/swagger/ui/?url=https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/ngsild_swagger.json).
+* [Edit the API online](https://forge.etsi.org/swagger/editor/?url=https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/ngsild_swagger.json).
+
 ## Contribute
 
 To get an account on ETSI Forge and to learn how to contribute visit the [Forge Getting started wiki](https://forge.etsi.org/wiki/index.php/Get_started).
