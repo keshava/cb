@@ -7,7 +7,7 @@
 				"@id": "http://uri.etsi.org/ngsi-ld/hasObject",
 				"@type":"@id"
 			},
-			"Property": "http://etsi.org/nsgi-ld/Property",
+			"Property": "http://uri.etsi.org/ngsi-ld/Property",
 			"Relationship": "http://uri.etsi.org/ngsi-ld/Relationship",
 			"DateTime": "http://uri.etsi.org/ngsi-ld/DateTime",
 			"Date": "http://uri.etsi.org/ngsi-ld/Date",
@@ -77,7 +77,7 @@
 			"coordinates": "http://uri.etsi.org/ngsi-ld/coordinates",
 			"georel": "http://uri.etsi.org/ngsi-ld/georel",
 			"attributes": {
-				"@id": "http://uri.etsi.org/ngsi-ld/attributes ",
+				"@id": "http://uri.etsi.org/ngsi-ld/attributes",
 				"@type": "@id"
 			},
 			"format": "http://uri.etsi.org/ngsi-ld/format",
