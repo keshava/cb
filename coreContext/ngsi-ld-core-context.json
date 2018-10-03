@@ -24,6 +24,14 @@
 				"@id": "http://uri.etsi.org/ngsi-ld/observedAt",
 				"@type": "DateTime"
 			},
+			"datasetId": {
+			    "@id": "http://uri.etsi.org/ngsi-ld/datasetId",
+				"@type": "@id"
+			},
+			"instanceId": {
+			    "@id": "http://uri.etsi.org/ngsi-ld/instanceId",
+				"@type": "@id"
+			},
 			"unitCode": "http://uri.etsi.org/ngsi-ld/unitCode",
 			"location": "http://uri.etsi.org/ngsi-ld/location",
 			"observationSpace": "http://uri.etsi.org/ngsi-ld/observationSpace",
