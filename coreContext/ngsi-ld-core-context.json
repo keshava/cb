@@ -117,7 +117,7 @@
 			"values":{
 			    "@id": "http://uri.etsi.org/ngsi-ld/hasValues",
 			    "@container": "@list"
-            },
+			},
             "objects":{
                 "@id": "http://uri.etsi.org/ngsi-ld/hasObjects",
                 "@type": "@id",
