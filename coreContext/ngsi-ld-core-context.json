@@ -119,9 +119,9 @@
 			    "@container": "@list"
             },
             "objects":{
-	            "@id": "http://uri.etsi.org/ngsi-ld/hasObjects",
-	            "@type": "@id",
-	            "@container": "@list"
+                "@id": "http://uri.etsi.org/ngsi-ld/hasObjects",
+                "@type": "@id",
+                "@container": "@list"
             }
 		}
 }
