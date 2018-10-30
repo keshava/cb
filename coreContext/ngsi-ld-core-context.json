@@ -113,6 +113,15 @@
 				"@type": "DateTime"
 			},
 			"data": "http://uri.etsi.org/ngsi-ld/data",
-			"triggerReason": "http://uri.etsi.org/ngsi-ld/triggerReason"
+			"triggerReason": "http://uri.etsi.org/ngsi-ld/triggerReason",
+			"values":{
+			    "@id": "http://uri.etsi.org/ngsi-ld/hasValues",
+			    "@container": "@list"
+            },
+            "objects":{
+	            "@id": "http://uri.etsi.org/ngsi-ld/hasObjects",
+	            "@type": "@id",
+	            "@container": "@list"
+            }
 		}
 }
