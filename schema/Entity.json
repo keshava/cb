@@ -50,7 +50,48 @@
             "value"
           ],
           "additionalProperties": {
-            "$ref": "#/definitions/Property"
+            "anyOf": [
+              {
+                "$ref": "#/definitions/Property"
+              },
+              {
+                "$ref": "#/definitions/Relationship"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "Relationship": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Commons"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "Relationship"
+            },
+            "object": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": [
+            "type",
+            "object"
+          ],
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/Property"
+              },
+              {
+                "$ref": "#/definitions/Relationship"
+              }
+            ]
           }
         }
       ]
@@ -72,6 +113,13 @@
     "type"
   ],
   "additionalProperties": {
-    "$ref": "#/definitions/Property"
+    "anyOf": [
+      {
+        "$ref": "#/definitions/Property"
+      },
+      {
+        "$ref": "#/definitions/Relationship"
+      }
+    ]
   }
 }
