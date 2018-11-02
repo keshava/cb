@@ -19,7 +19,7 @@
           "type": "string",
           "format": "date-time"
         },
-        "datesetId": {
+        "datasetId": {
           "type": "string",
           "format": "uri"
         },
