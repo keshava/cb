@@ -16,5 +16,12 @@
   "closeTo": {
     "type": "Relationship",
     "object": "urn:ngsi-ld:Building:B1234"  
-  }
+  },
+  "location": {
+      "type": "GeoProperty",
+      "value": {
+        "type":"Point",
+        "coordinates": [-8,44]  
+      }
+  }  
 }
