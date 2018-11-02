@@ -6,7 +6,7 @@
     "value": 23,
     "accuracy": {
       "type": "Property",
-      "value": 22
+      "value": 0.7
     },
     "providedBy": {
       "type": "Relationship",
