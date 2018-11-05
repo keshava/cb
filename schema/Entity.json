@@ -167,6 +167,15 @@
     },
     "@context": {
       "$ref": "#/definitions/LdContext"
+    },
+    "location": {
+      "$ref": "#/definitions/GeoProperty"
+    },
+    "observationSpace": {
+      "$ref": "#/definitions/GeoProperty"
+    },
+    "operationSpace": {
+      "$ref": "#/definitions/GeoProperty"
     }
   },
   "required": [
