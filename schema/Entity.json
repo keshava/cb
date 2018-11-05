@@ -4,6 +4,31 @@
   "title": "NGSI-LD Entity",
   "description": "NGSI-LD Entity",
   "definitions": {
+    "LdContext": {
+      "anyOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          }
+        }
+      ]
+    },
     "Commons": {
       "type": "object",
       "properties": {
@@ -139,6 +164,9 @@
     "type": {
       "type": "string",
       "description": "NGSI Entity type"
+    },
+    "@context": {
+      "$ref": "#/definitions/LdContext"
     }
   },
   "required": [
