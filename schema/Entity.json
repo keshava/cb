@@ -4,31 +4,6 @@
   "title": "NGSI-LD Entity",
   "description": "NGSI-LD Entity",
   "definitions": {
-    "LdContext": {
-      "anyOf": [
-        {
-          "type": "object"
-        },
-        {
-          "type": "string",
-          "format": "uri"
-        },
-        {
-          "type": "array",
-          "items": {
-            "anyOf": [
-              {
-                "type": "string",
-                "format": "uri"
-              },
-              {
-                "type": "object"
-              }
-            ]
-          }
-        }
-      ]
-    },
     "observedAt": {
       "type": "string",
       "format": "date-time"
