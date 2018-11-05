@@ -109,7 +109,7 @@
               "const": "GeoProperty"
             },
             "value": {
-              "$ref": "https://raw.githubusercontent.com/Fiware/dataModels/master/geometry-schema.json"
+              "$ref": "http://json.schemastore.org/geojson#/definitions/geometry"
             }
           },
           "required": [
