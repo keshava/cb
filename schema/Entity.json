@@ -29,130 +29,146 @@
         }
       ]
     },
-    "Commons": {
-      "type": "object",
-      "properties": {
-        "observedAt": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "createdAt": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "modifiedAt": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "datasetId": {
-          "type": "string",
-          "format": "uri"
-        },
-        "instanceId": {
-          "type": "string",
-          "format": "uri"
-        }
-      }
+    "observedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "modifiedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "datasetId": {
+      "type": "string",
+      "format": "uri"
+    },
+    "instanceId": {
+      "type": "string",
+      "format": "uri"
     },
     "Property": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/Commons"
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Property"
         },
-        {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string",
-              "const": "Property"
-            },
-            "value": {
-              "type": "any"
-            }
-          },
-          "required": [
-            "type",
-            "value"
-          ],
-          "additionalProperties": {
-            "anyOf": [
-              {
-                "$ref": "#/definitions/Property"
-              },
-              {
-                "$ref": "#/definitions/Relationship"
-              }
-            ]
-          }
+        "value": {
+          "type": "any"
+        },
+        "observedAt": {
+          "$ref": "#/definitions/observedAt"
+        },
+        "createdAt": {
+          "$ref": "#/definitions/createdAt"
+        },
+        "modifiedAt": {
+          "$ref": "#/definitions/modifiedAt"
+        },
+        "datasetId": {
+          "$ref": "#/definitions/datasetId"
+        },
+        "instanceId": {
+          "$ref": "#/definitions/instanceId"
         }
-      ]
+      },
+      "required": [
+        "type",
+        "value"
+      ],
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "$ref": "#/definitions/Property"
+          },
+          {
+            "$ref": "#/definitions/Relationship"
+          }
+        ]
+      }
     },
     "Relationship": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/Commons"
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "Relationship"
         },
-        {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string",
-              "const": "Relationship"
-            },
-            "object": {
-              "type": "string",
-              "format": "uri"
-            }
-          },
-          "required": [
-            "type",
-            "object"
-          ],
-          "additionalProperties": {
-            "anyOf": [
-              {
-                "$ref": "#/definitions/Property"
-              },
-              {
-                "$ref": "#/definitions/Relationship"
-              }
-            ]
-          }
+        "object": {
+          "type": "string",
+          "format": "uri"
+        },
+        "observedAt": {
+          "$ref": "#/definitions/observedAt"
+        },
+        "createdAt": {
+          "$ref": "#/definitions/createdAt"
+        },
+        "modifiedAt": {
+          "$ref": "#/definitions/modifiedAt"
+        },
+        "datasetId": {
+          "$ref": "#/definitions/datasetId"
+        },
+        "instanceId": {
+          "$ref": "#/definitions/instanceId"
         }
-      ]
+      },
+      "required": [
+        "type",
+        "object"
+      ],
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "$ref": "#/definitions/Property"
+          },
+          {
+            "$ref": "#/definitions/Relationship"
+          }
+        ]
+      }
     },
     "GeoProperty": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/Commons"
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "GeoProperty"
         },
-        {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string",
-              "const": "GeoProperty"
-            },
-            "value": {
-              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#"
-            }
-          },
-          "required": [
-            "type",
-            "value"
-          ],
-          "additionalProperties": {
-            "anyOf": [
-              {
-                "$ref": "#/definitions/Property"
-              },
-              {
-                "$ref": "#/definitions/Relationship"
-              }
-            ]
-          }
+        "value": {
+          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#"
+        },
+        "createdAt": {
+          "$ref": "#/definitions/createdAt"
+        },
+        "modifiedAt": {
+          "$ref": "#/definitions/modifiedAt"
+        },
+        "datasetId": {
+          "$ref": "#/definitions/datasetId"
+        },
+        "instanceId": {
+          "$ref": "#/definitions/instanceId"
         }
-      ]
+      },
+      "required": [
+        "type",
+        "value"
+      ],
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "$ref": "#/definitions/Property"
+          },
+          {
+            "$ref": "#/definitions/Relationship"
+          }
+        ]
+      }
     }
   },
   "type": "object",
@@ -176,6 +192,12 @@
     },
     "operationSpace": {
       "$ref": "#/definitions/GeoProperty"
+    },
+    "createdAt": {
+      "$ref": "#/definitions/createdAt"
+    },
+    "modifiedAt": {
+      "$ref": "#/definitions/modifiedAt"
     }
   },
   "required": [
