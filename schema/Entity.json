@@ -109,7 +109,7 @@
               "const": "GeoProperty"
             },
             "value": {
-              "$ref": "http://json.schemastore.org/geojson#/definitions/geometry"
+              "$ref": "geometry-schema.json#/definitions/geometry"
             }
           },
           "required": [
