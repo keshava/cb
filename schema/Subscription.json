@@ -1,0 +1,130 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "id": "https://uri.etsi.org/ngsi-ld/schema/Subscription.json",
+  "title": "NGSI-LD Subscription",
+  "description": "NGSI-LD Subscription",
+  "definitions": {
+    "NotificationParams": {},
+    "EntityInfo": {},
+    "GeoQuery": {
+      "type": "object",
+      "required": [
+        "geometry",
+        "coordinates",
+        "georel"
+      ],
+      "properties": {
+        "georel": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enumeration": [
+                "equals",
+                "disjoint",
+                "intersects",
+                "within",
+                "contains",
+                "overlaps"
+              ]
+            },
+            {
+              "type": "string",
+              "pattern": "near;maxDistance=="
+            }
+          ]
+        },
+        "coordinates": {
+          "oneOf": [{
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#/definitions/position",
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#/definitions/positionArray",
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#/definitions/lineString",
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#/definitions/polygon"
+          }]
+        },
+        "geometry": {
+          "type": "string",
+          "enumeration": [
+            "Point",
+            "MultiPoint",
+            "LineString",
+            "MultiLineString",
+            "Polygon",
+            "MultiPolygon"
+          ]
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "type": {
+      "type": "string",
+      "const": "Subscription"
+    },
+    "@context": {
+      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entities": {
+      "$ref": "#/definitions/EntityInfo"
+    },
+    "watchedAttributes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "timeInterval": {
+      "type": "number",
+      "minimum": 0
+    },
+    "geoQ": {
+      "$ref": "#/definitions/GeoQuery"
+    },
+    "notification": {
+      "$ref": "#/definitions/NotificationParams"
+    },
+    "expires": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "paused",
+        "expired"
+      ]
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "throttling": {
+      "type": "number",
+      "minimum": 1
+    },
+    "q": {
+      "type": "string"
+    },
+    "csf": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+  ]
+}
