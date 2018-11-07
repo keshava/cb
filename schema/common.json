@@ -42,6 +42,25 @@
           "format": "date-time"
         }
       }
+    },
+    "Endpoint": {
+      "type": "object",
+      "required": [
+        "uri"
+      ],
+      "properties": {
+        "uri": {
+          "type": "string",
+          "format": "uri"
+        },
+        "accept": {
+          "type": "string",
+          "enum": [
+            "application/json",
+            "application/ld+json"
+          ]
+        }
+      }
     }
   }
 }
