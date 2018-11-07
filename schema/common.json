@@ -76,7 +76,8 @@
           "type": "string",
           "format": "regex"
         }
-      }
+      },
+      "required": ["type"]
     }
   }
 }

@@ -11,8 +11,10 @@
           "type": "array",
           "minItems": 1,
           "items": {
-            "type": "string"
-          }
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
         },
         "format": {
           "type": "string"
@@ -140,7 +142,8 @@
       "type": "array",
       "minItems": 1,
       "items": {
-        "type": "string"
+        "type": "string",
+        "minLength": 1
       },
       "uniqueItems": true
     },
@@ -180,8 +183,26 @@
   "modifiedAt": {
     "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
   },
-  "required": [
-    "id",
-    "type"
+  "allOf": [
+    {
+      "required": [
+        "id",
+        "type"
+      ]
+    },
+    {
+      "anyOf": [
+        {
+          "required": [
+            "entities"
+          ]
+        },
+        {
+          "required": [
+            "watchedAttributes"
+          ]
+        }
+      ]
+    }
   ]
 }
