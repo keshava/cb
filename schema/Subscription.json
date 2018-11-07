@@ -48,9 +48,6 @@
         "endpoint"
       ]
     },
-    "EntityInfo": {
-      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/EntityInfo"
-    },
     "GeoQuery": {
       "type": "object",
       "required": [
@@ -122,7 +119,11 @@
       "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
     },
     "entities": {
-      "$ref": "#/definitions/EntityInfo"
+      "type": "array",
+      "items": {
+        "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/EntityInfo"
+      },
+      "minItems": 1
     },
     "name": {
       "type": "string",
