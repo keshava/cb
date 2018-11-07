@@ -7,178 +7,174 @@
     "NotificationParams": {
       "type": "object",
       "properties": {
-        "type": "object",
-        "required": [
-          "endpoint"
-        ],
-        "properties": {
-          "attributes": {
-            "type": "array",
-            "minItems": 1,
-            "items": {
-              "type": "string"
-            }
-          },
-          "format": {
+        "attributes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
             "type": "string"
-          },
-          "endpoint": {
-            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/EndPoint"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "ok",
-              "failed"
-            ]
-          },
-          "timesSent": {
-            "type": "number",
-            "minimum": 1
-          },
-          "lastNotification": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "lastFailure": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "lastSuccess": {
-            "type": "string",
-            "format": "date-time"
           }
-        }
-      },
-      "EntityInfo": {},
-      "GeoQuery": {
-        "type": "object",
-        "required": [
-          "geometry",
-          "coordinates",
-          "georel"
-        ],
-        "properties": {
-          "georel": {
-            "oneOf": [
-              {
-                "type": "string",
-                "enumeration": [
-                  "equals",
-                  "disjoint",
-                  "intersects",
-                  "within",
-                  "contains",
-                  "overlaps"
-                ]
-              },
-              {
-                "type": "string",
-                "pattern": "near;(maxDistance==\\d+)|(minDistance==\\d+)$"
-              }
-            ]
-          },
-          "coordinates": {
-            "oneOf": [
-              {
-                "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#/definitions/position"
-              },
-              {
-                "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#/definitions/positionArray"
-              },
-              {
-                "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#/definitions/lineString"
-              },
-              {
-                "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#/definitions/polygon"
-              }
-            ]
-          },
-          "geometry": {
-            "type": "string",
-            "enumeration": [
-              "Point",
-              "MultiPoint",
-              "LineString",
-              "MultiLineString",
-              "Polygon",
-              "MultiPolygon"
-            ]
-          }
-        }
-      }
-    },
-    "type": "object",
-    "properties": {
-      "id": {
-        "type": "string",
-        "format": "uri"
-      },
-      "type": {
-        "type": "string",
-        "const": "Subscription"
-      },
-      "@context": {
-        "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
-      },
-      "name": {
-        "type": "string",
-        "minLength": 1
-      },
-      "description": {
-        "type": "string",
-        "minLength": 1
-      },
-      "entities": {
-        "$ref": "#/definitions/EntityInfo"
-      },
-      "watchedAttributes": {
-        "type": "array",
-        "minItems": 1,
-        "items": {
+        },
+        "format": {
           "type": "string"
         },
-        "uniqueItems": true
+        "endpoint": {
+          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Endpoint"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "ok",
+            "failed"
+          ]
+        },
+        "timesSent": {
+          "type": "number",
+          "minimum": 1
+        },
+        "lastNotification": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastFailure": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastSuccess": {
+          "type": "string",
+          "format": "date-time"
+        }
       },
-      "timeInterval": {
-        "type": "number",
-        "minimum": 0
-      },
-      "geoQ": {
-        "$ref": "#/definitions/GeoQuery"
-      },
-      "notification": {
-        "$ref": "#/definitions/NotificationParams"
-      },
-      "expires": {
-        "type": "string",
-        "format": "date-time"
-      },
-      "status": {
-        "type": "string",
-        "enum": [
-          "active",
-          "paused",
-          "expired"
-        ]
-      },
-      "isActive": {
-        "type": "boolean"
-      },
-      "throttling": {
-        "type": "number",
-        "minimum": 1
-      },
-      "q": {
-        "type": "string"
-      },
-      "csf": {
-        "type": "string"
-      }
+      "required": [
+        "endpoint"
+      ]
     },
-    "required": [
-      "id",
-      "type"
-    ]
-  }
+    "EntityInfo": {
+      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/EntityInfo"
+    },
+    "GeoQuery": {
+      "type": "object",
+      "required": [
+        "geometry",
+        "coordinates",
+        "georel"
+      ],
+      "properties": {
+        "georel": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enumeration": [
+                "equals",
+                "disjoint",
+                "intersects",
+                "within",
+                "contains",
+                "overlaps"
+              ]
+            },
+            {
+              "type": "string",
+              "pattern": "near;(maxDistance==\\d+)|(minDistance==\\d+)$"
+            }
+          ]
+        },
+        "coordinates": {
+          "oneOf": [
+            {
+              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#/definitions/position"
+            },
+            {
+              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#/definitions/positionArray"
+            },
+            {
+              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#/definitions/lineString"
+            },
+            {
+              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#/definitions/polygon"
+            }
+          ]
+        },
+        "geometry": {
+          "type": "string",
+          "enumeration": [
+            "Point",
+            "MultiPoint",
+            "LineString",
+            "MultiLineString",
+            "Polygon",
+            "MultiPolygon"
+          ]
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "type": {
+      "type": "string",
+      "const": "Subscription"
+    },
+    "@context": {
+      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
+    },
+    "entities": {
+      "$ref": "#/definitions/EntityInfo"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "notification": {
+      "$ref": "#/definitions/NotificationParams"
+    },
+    "watchedAttributes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "timeInterval": {
+      "type": "number",
+      "minimum": 0
+    },
+    "expires": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "paused",
+        "expired"
+      ]
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "throttling": {
+      "type": "number",
+      "minimum": 1
+    },
+    "q": {
+      "type": "string"
+    },
+    "csf": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "type"
+  ]
 }

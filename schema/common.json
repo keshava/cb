@@ -61,6 +61,43 @@
           ]
         }
       }
+    },
+    "EntityInfo": {
+      "anyOf": [
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "idPattern"
+          ],
+          "properties": {
+            "idPattern": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "type": {
+              "type": "string"
+            }
+          }
+        }
+      ]
     }
   }
 }
