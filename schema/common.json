@@ -63,41 +63,20 @@
       }
     },
     "EntityInfo": {
-      "anyOf": [
-        {
-          "type": "object",
-          "required": [
-            "id"
-          ],
-          "properties": {
-            "id": {
-              "type": "string"
-            }
-          }
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri"
         },
-        {
-          "type": "object",
-          "required": [
-            "idPattern"
-          ],
-          "properties": {
-            "idPattern": {
-              "type": "string"
-            }
-          }
+        "type": {
+          "type": "string",
+          "minLength": 1
         },
-        {
-          "type": "object",
-          "required": [
-            "type"
-          ],
-          "properties": {
-            "type": {
-              "type": "string"
-            }
-          }
+        "idPattern": {
+          "type": "string",
+          "format": "regex"
         }
-      ]
+      }
     }
-  }
 }
