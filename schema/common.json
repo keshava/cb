@@ -4,6 +4,18 @@
   "title": "NGSI-LD Common Definitions",
   "description": "NGSI-LD Common",
   "definitions": {
+    "observedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "modifiedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
     "LdContext": {
       "anyOf": [
         {
@@ -29,19 +41,6 @@
           }
         }
       ]
-    },
-    "Dates": {
-      "type": "object",
-      "properties": {
-        "createdAt": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "modifiedAt": {
-          "type": "string",
-          "format": "date-time"
-        }
-      }
     },
     "Endpoint": {
       "type": "object",
@@ -79,4 +78,5 @@
         }
       }
     }
+  }
 }
