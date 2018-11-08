@@ -4,7 +4,7 @@
   "description": "NGSI-LD Schema Compilation",
   "main": "index.js",
   "scripts": {
-    "test": "ajv compile -s schema/Entity.json -r schema/common.json -r schema/geometry-schema.json"
+    "test": "scripts/validate_schema.sh"
   },
   "repository": {
     "type": "git",
