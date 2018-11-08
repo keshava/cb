@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "id": "https://uri.etsi.org/ngsi-ld/schema/EntityTemporal.json",
+  "title": "NGSI-LD Entity",
+  "description": "NGSI-LD Temporal Representation of an Entity",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "type": {
+      "type": "string",
+      "description": "NGSI Entity type",
+      "minLength": 1
+    },
+    "@context": {
+      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
+    },
+    "location": {
+      "type": "array",
+      "items": {
+        "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/GeoProperty"
+      },
+      "minItems": 1
+    },
+    "createdAt": {
+      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
+    },
+    "modifiedAt": {
+      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
+    }
+  },
+  "required": [
+    "id",
+    "type"
+  ],
+  "additionalProperties": {
+    "anyOf": [
+      {
+        "type": "array",
+        "items": {
+          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Property"
+        },
+        "minItems": 1
+      },
+      {
+        "type": "array",
+        "items": {
+          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
+        },
+        "minItems": 1
+      },
+      {
+        "type": "array",
+        "items": {
+          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/GeoProperty"
+        },
+        "minItems": 1
+      }
+    ]
+  }
+}
