@@ -173,6 +173,9 @@
     "q": {
       "type": "string"
     },
+    "geoQ": {
+      "$ref": "#/definitions/GeoQuery"  
+    },
     "csf": {
       "type": "string"
     }
