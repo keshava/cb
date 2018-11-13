@@ -77,7 +77,27 @@
           "format": "regex"
         }
       },
-      "required": ["type"]
+      "required": [
+        "type"
+      ]
     }
+  },
+  "ProblemDetails": {
+    "type": "object",
+    "properties": {
+      "type": {
+        "type": "string",
+        "format": "uri"
+      },
+      "title": {
+        "type": "string"
+      },
+      "detail": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "type"
+    ]
   }
 }
