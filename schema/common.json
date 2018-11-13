@@ -4,6 +4,12 @@
   "title": "NGSI-LD Common Definitions",
   "description": "NGSI-LD Common",
   "definitions": {
+    "Name": {
+      "type": "string",
+      "pattern": "^(\\d|[a-zA-Z]|_)+$",
+      "minLength": 1,
+      "description": "NGSI-LD Name"
+    },
     "observedAt": {
       "type": "string",
       "format": "date-time"
@@ -69,8 +75,7 @@
           "format": "uri"
         },
         "type": {
-          "type": "string",
-          "minLength": 1
+          "$ref": "#/definitions/Name"
         },
         "idPattern": {
           "type": "string",
