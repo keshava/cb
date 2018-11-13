@@ -18,3 +18,4 @@ ajv compile -s $SCHEMAS/BatchOperationResult.json -r $SCHEMAS/common.json
 
 ajv compile -s $SCHEMAS/UpdateResult.json
 
+ajv compile -s $SCHEMAS/Entity_keyValues.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json -r $SCHEMAS/Entity.json

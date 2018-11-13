@@ -4,6 +4,12 @@
   "title": "NGSI-LD Entity",
   "description": "NGSI-LD Entity",
   "definitions": {
+    "EntityType": {
+      "type": "string",
+      "pattern": "^(\\d|[a-zA-Z]|_)+$",
+      "minLength": 1,
+      "description": "NGSI Entity type"
+    },
     "datasetId": {
       "type": "string",
       "format": "uri"
@@ -144,9 +150,7 @@
       "format": "uri"
     },
     "type": {
-      "type": "string",
-      "description": "NGSI Entity type",
-      "minLength": 1
+      "$ref": "#/definitions/EntityType"
     },
     "@context": {
       "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
