@@ -12,3 +12,5 @@ ajv compile -s $SCHEMAS/Notification.json -r $SCHEMAS/common.json -r $SCHEMAS/ge
 
 ajv compile -s $SCHEMAS/ContextSourceNotification.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json -r $SCHEMAS/ContextSourceRegistration.json
 
+ajv compile -s $SCHEMAS/EntityList.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json -r $SCHEMAS/Entity.json
+
