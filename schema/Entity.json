@@ -183,5 +183,9 @@
         "$ref": "#/definitions/GeoProperty"
       }
     ]
+  },
+  "propertyNames": {
+    "type": "string",
+    "pattern": "^((\\d|[a-zA-Z]|_)+(#\\d+)?)$"
   }
 }
