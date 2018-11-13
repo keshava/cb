@@ -10,7 +10,7 @@ ajv compile -s $SCHEMAS/registrations/ContextSourceRegistration.json -r $SCHEMAS
 
 ajv compile -s $SCHEMAS/subscriptions/Notification.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json -r $SCHEMAS/Entity.json
 
-ajv compile -s $SCHEMAS/subscriptions/ContextSourceNotification.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json -r $SCHEMAS/registrations/ContextSourceRegistration.json
+ajv compile -s $SCHEMAS/registrations/ContextSourceNotification.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json -r $SCHEMAS/registrations/ContextSourceRegistration.json
 
 ajv compile -s $SCHEMAS/EntityList.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json -r $SCHEMAS/Entity.json
 
