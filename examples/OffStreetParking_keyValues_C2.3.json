@@ -1,0 +1,15 @@
+{
+   	"id": "urn:ngsi-ld:OffStreetParking:Downtown1",
+   	"type": "OffStreetParking",
+	"name": "Downtown One",
+   	"availableSpotNumber": 121,
+	"totalSpotNumber": 200,
+	"location": {
+		"type": "Point",
+		"coordinates": [-8.5, 41.2]
+	},
+	"@context": [
+		"http://uri.etsi.org/ngsi-ld/coreContext.jsonld",
+		"http://example.org/cim/parking.jsonld"
+	]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "urn:ngsi-ld:Vehicle:B9211",
+  "type": "Vehicle",
+  "brandName": {
+    "type": "Property",
+    "values": [
+      [
+        "Volvo",
+        ""
+      ]
+    ]
+  },
+  "speed": {
+    "type": "Property",
+    "values": [
+      [
+        120,
+        "2018-08-01T12:03:00"
+      ],
+      [
+        80,
+        "2018-08-01T12:05:00"
+      ],
+      [
+        100,
+        "2018-08-01T12:07:00"
+      ]
+    ]
+  },
+  "@context": [
+    "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/coreContext/ngsi-ld-core-context.json",
+    "http://example.org/ngsi-ld/vehicle.jsonld"
+  ]
+}
