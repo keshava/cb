@@ -59,10 +59,10 @@
       ],
       "properties": {
         "georel": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
-              "enumeration": [
+              "enum": [
                 "equals",
                 "disjoint",
                 "intersects",
@@ -73,7 +73,7 @@
             },
             {
               "type": "string",
-              "pattern": "near;(maxDistance==\\d+)|(minDistance==\\d+)$"
+              "pattern": "^near;((maxDistance==\\d+)|(minDistance==\\d+))$"
             }
           ]
         },

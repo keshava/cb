@@ -116,6 +116,6 @@
   },
   "propertyNames": {
     "type": "string",
-    "pattern": "^((\\d|[a-zA-Z]|_)+(#\\d+)?)$"
+    "pattern": "^((\\d|[a-zA-Z]|_)+(#\\d+)?)$|^(@context)$"
   }
 }
