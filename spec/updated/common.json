@@ -1,0 +1,70 @@
+{
+    "openapi": "3.0.1",
+    "components": {
+      "parameters": [
+        {
+          "name": "id",
+          "description": "Comma separated list of URIs to be retrieved",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "description": "Comma separated list of Entity type names to be retrieved",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "idPattern",
+          "description": "Regular expression that must be matched by Entity ids",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "attrs",
+          "description": "Comma separated list of attribute names (properties or relationships) to be retrieved",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "q",
+          "description": "Query",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "georel",
+          "description": "Geo-relationship",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "description": "Geometry",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "coordinates",
+          "description": "Coordinates serialized as a string",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "name": "geoproperty",
+          "description": "The name of the property that contains the geo-spatial data that will be used to resolve the geoquery",
+          "in": "query",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    }
+}

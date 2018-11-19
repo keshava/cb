@@ -1,0 +1,42 @@
+{
+	"openapi": "3.0.1",
+	"info": {
+		"title": "NGSI-LD Entities",
+		"version": "latest"
+	},
+	"paths": {
+		"/entities/": {
+			"get": {
+				"description": "Retrieve a set of entities which matches a specific query from an NGSI-LD system",
+				"operationId": "queryEntities",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json;application/ld+json": {
+								"schema": {
+									"$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/EntityList.json#"
+								},
+								"examples": {
+									"simple": {
+										"externalValue": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/examples/Entity-example.json"
+									}
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad request",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": ""
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
