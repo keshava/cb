@@ -1,0 +1,87 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "NGSI-LD Entity By Id",
+    "version": "latest"
+  },
+  "components": {
+    "parameters": {
+      "entityId": {
+        "name": "entityId",
+        "description": "Entity Id",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "type": {
+        "name": "type",
+        "description": "Entity Type",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
+        }
+      },
+      "attrs": {
+        "name": "attrs",
+        "description": "Comma separated list of attribute names (properties or relationships) to be retrieved",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  },
+  "paths": {
+    "/entities/{entityId}": {
+      "get": {
+        "description": "Retrieve an specific Entity from an NGSI-LD system. It's possible to specify the Entity attributes to be retrieved by using query parameters",
+        "operationId": "retrieveEntityById",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/entityId"
+          },
+          {
+            "$ref": "#/components/parameters/attrs"
+          },
+          {
+            "$ref": "#/components/parameters/type"
+          },
+          
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#"
+                },
+                "examples": {
+                  "simple": {
+                    "externalValue": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/examples/Entity-example.json"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
