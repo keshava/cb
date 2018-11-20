@@ -142,16 +142,9 @@
         ]
       }
     },
-    "Entity": {
+    "EntityFragment": {
       "type": "object",
       "properties": {
-        "id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "type": {
-          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
-        },
         "@context": {
           "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
         },
@@ -163,12 +156,6 @@
         },
         "operationSpace": {
           "$ref": "#/definitions/GeoProperty"
-        },
-        "createdAt": {
-          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
-        },
-        "modifiedAt": {
-          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
         }
       },
       "required": [
@@ -192,11 +179,36 @@
         "type": "string",
         "pattern": "^((\\d|[a-zA-Z]|_)+(#\\d+)?)$|^(@context)$"
       }
+    },
+    "Entity": {
+      "allOf": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uri"
+            },
+            "type": {
+              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
+            },
+            "createdAt": {
+              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
+            },
+            "modifiedAt": {
+              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
+            }
+          }
+        },
+        {
+          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/EntityFragment"
+        }
+      ]
     }
   },
-    "allOf": [
-      {
-        "$ref": "#/definitions/Entity"
-      }
-    ]
+  "allOf": [
+    {
+      "$ref": "#/definitions/Entity"
+    }
+  ]
 }
