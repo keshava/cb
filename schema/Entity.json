@@ -20,7 +20,13 @@
           "const": "Property"
         },
         "value": {
-          "type": ["string","number","boolean","array","object"]
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "array",
+            "object"
+          ]
         },
         "observedAt": {
           "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/observedAt"
@@ -135,55 +141,62 @@
           }
         ]
       }
+    },
+    "Entity": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "type": {
+          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
+        },
+        "@context": {
+          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
+        },
+        "location": {
+          "$ref": "#/definitions/GeoProperty"
+        },
+        "observationSpace": {
+          "$ref": "#/definitions/GeoProperty"
+        },
+        "operationSpace": {
+          "$ref": "#/definitions/GeoProperty"
+        },
+        "createdAt": {
+          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
+        },
+        "modifiedAt": {
+          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
+        }
+      },
+      "required": [
+        "id",
+        "type"
+      ],
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "$ref": "#/definitions/Property"
+          },
+          {
+            "$ref": "#/definitions/Relationship"
+          },
+          {
+            "$ref": "#/definitions/GeoProperty"
+          }
+        ]
+      },
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^((\\d|[a-zA-Z]|_)+(#\\d+)?)$|^(@context)$"
+      }
     }
   },
-  "type": "object",
-  "properties": {
-    "id": {
-      "type": "string",
-      "format": "uri"
-    },
-    "type": {
-      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
-    },
-    "@context": {
-      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
-    },
-    "location": {
-      "$ref": "#/definitions/GeoProperty"
-    },
-    "observationSpace": {
-      "$ref": "#/definitions/GeoProperty"
-    },
-    "operationSpace": {
-      "$ref": "#/definitions/GeoProperty"
-    },
-    "createdAt": {
-      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
-    },
-    "modifiedAt": {
-      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
-    }
-  },
-  "required": [
-    "id",
-    "type"
-  ],
-  "additionalProperties": {
-    "anyOf": [
+    "allOf": [
       {
-        "$ref": "#/definitions/Property"
-      },
-      {
-        "$ref": "#/definitions/Relationship"
-      },
-      {
-        "$ref": "#/definitions/GeoProperty"
+        "$ref": "#/definitions/Entity"
       }
     ]
-  },
-  "propertyNames": {
-    "type": "string",
-    "pattern": "^((\\d|[a-zA-Z]|_)+(#\\d+)?)$|^(@context)$"
-  }
 }
