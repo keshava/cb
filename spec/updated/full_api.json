@@ -195,6 +195,19 @@
               "type": "integer",
               "minimum": 1
             }
+          },
+          {
+            "name": "options",
+            "description": "Options dictionary",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "keyValues",
+                "sysAttrs"
+              ]
+            }
           }
         ],
         "responses": {
@@ -203,23 +216,10 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$schema": "http://json-schema.org/schema#",
-                  "id": "https://uri.etsi.org/ngsi-ld/schema/EntityList.json",
-                  "title": "NGSI-LD EntityList",
-                  "description": "NGSI-LD EntityList",
-                  "definitions": {
-                    "EntityList": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/Entity"
-                      }
-                    }
-                  },
-                  "allOf": [
-                    {
-                      "$ref": "#/paths/~1entities~1/get/responses/200/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/EntityList"
-                    }
-                  ]
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/Entity"
+                  }
                 },
                 "examples": {
                   "simple": {
@@ -342,6 +342,9 @@
               "minLength": 1,
               "description": "NGSI-LD Name"
             }
+          },
+          {
+            "$ref": "#/paths/~1entities~1/get/parameters/11"
           }
         ],
         "responses": {
@@ -350,7 +353,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema"
+                  "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/Entity"
                 },
                 "examples": {
                   "simple": {
