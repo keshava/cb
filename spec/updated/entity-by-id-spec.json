@@ -51,6 +51,9 @@
           },
           {
             "$ref": "#/components/parameters/type"
+          },
+          {
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/options"
           }
         ],
         "responses": {
@@ -59,7 +62,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#"
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Entity"
                 },
                 "examples": {
                   "simple": {

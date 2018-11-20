@@ -112,6 +112,16 @@
           "type": "integer",
           "minimum": 1
         }
+      },
+      "options":{
+        "name": "options",
+        "description": "Options dictionary",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "enum": ["keyValues", "sysAttrs"]
+        }
       }
     }
   },
@@ -153,6 +163,9 @@
           },
           {
             "$ref": "#/components/parameters/limit"
+          },
+          {
+            "$ref": "#/components/parameters/options"
           }
         ],
         "responses": {
@@ -161,7 +174,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/EntityList.json#"
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/EntityList.json#/definitions/EntityList"
                 },
                 "examples": {
                   "simple": {
