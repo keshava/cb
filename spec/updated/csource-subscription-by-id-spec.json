@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "NGSI-LD Subscription By Id",
+    "title": "NGSI-LD Context Source Subscription By Id",
     "version": "latest"
   },
   "components": {
@@ -19,7 +19,7 @@
     }
   },
   "paths": {
-    "/subscriptions/{subscriptionId}": {
+    "/csourceSubscriptions/{subscriptionId}": {
       "get": {
          "description": "Retrieves a specific Subscription from an NGSI-LD system",
          "operationId": "retrieveSubscription",
@@ -67,8 +67,8 @@
         }
       },
       "patch": {
-        "description": "Updates a specific Subscription within an NGSI-LD system",
-        "operationId": "updateSubscription",
+        "description": "Updates a specific context source discovery Subscription within an NGSI-LD system",
+        "operationId": "updateCSourceSubscription",
         "parameters": [
           {
             "$ref": "#/components/parameters/subscriptionId"
