@@ -152,16 +152,16 @@
             "schema": {
               "oneOf": [
                 {
-                  "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty/properties/value/definitions/position"
+                  "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/value/definitions/position"
                 },
                 {
-                  "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty/properties/value/definitions/positionArray"
+                  "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/value/definitions/positionArray"
                 },
                 {
-                  "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty/properties/value/definitions/lineString"
+                  "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/value/definitions/lineString"
                 },
                 {
-                  "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty/properties/value/definitions/polygon"
+                  "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/value/definitions/polygon"
                 }
               ]
             }
@@ -218,7 +218,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/Entity"
+                    "$ref": "#/paths/~1entities~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema"
                   }
                 },
                 "examples": {
@@ -264,7 +264,31 @@
           "content": {
             "application/json;application/ld+json": {
               "schema": {
-                "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/Entity"
+                "allOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "type": {
+                        "$ref": "#/paths/~1entities~1%7BentityId%7D/get/parameters/2/schema"
+                      },
+                      "createdAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "modifiedAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      }
+                    }
+                  },
+                  {
+                    "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema"
+                  }
+                ]
               }
             }
           }
@@ -353,7 +377,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/Entity"
+                  "$ref": "#/paths/~1entities~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema"
                 },
                 "examples": {
                   "simple": {
@@ -456,110 +480,35 @@
           "content": {
             "application/json;application/ld+json": {
               "schema": {
-                "$schema": "http://json-schema.org/schema#",
-                "id": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json",
-                "title": "NGSI-LD Entity",
-                "description": "NGSI-LD Entity",
-                "definitions": {
-                  "datasetId": {
-                    "type": "string",
-                    "format": "uri"
-                  },
-                  "instanceId": {
-                    "type": "string",
-                    "format": "uri"
-                  },
-                  "Property": {
-                    "type": "object",
-                    "properties": {
-                      "type": {
-                        "type": "string",
-                        "const": "Property"
+                "type": "object",
+                "properties": {
+                  "@context": {
+                    "anyOf": [
+                      {
+                        "type": "object"
                       },
-                      "value": {
-                        "type": [
-                          "string",
-                          "number",
-                          "boolean",
-                          "array",
-                          "object"
-                        ]
-                      },
-                      "observedAt": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "createdAt": {
-                        "$ref": "#/paths/~1entities~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/createdAt"
-                      },
-                      "modifiedAt": {
-                        "$ref": "#/paths/~1entities~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/modifiedAt"
-                      },
-                      "datasetId": {
-                        "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/datasetId"
-                      },
-                      "instanceId": {
-                        "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/instanceId"
-                      }
-                    },
-                    "required": [
-                      "type",
-                      "value"
-                    ],
-                    "additionalProperties": {
-                      "anyOf": [
-                        {
-                          "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/Property"
-                        },
-                        {
-                          "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/Relationship"
-                        }
-                      ]
-                    }
-                  },
-                  "Relationship": {
-                    "type": "object",
-                    "properties": {
-                      "type": {
-                        "type": "string",
-                        "const": "Relationship"
-                      },
-                      "object": {
+                      {
                         "type": "string",
                         "format": "uri"
                       },
-                      "observedAt": {
-                        "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/Property/properties/observedAt"
-                      },
-                      "createdAt": {
-                        "$ref": "#/paths/~1entities~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/createdAt"
-                      },
-                      "modifiedAt": {
-                        "$ref": "#/paths/~1entities~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/modifiedAt"
-                      },
-                      "datasetId": {
-                        "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/datasetId"
-                      },
-                      "instanceId": {
-                        "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/instanceId"
-                      }
-                    },
-                    "required": [
-                      "type",
-                      "object"
-                    ],
-                    "additionalProperties": {
-                      "anyOf": [
-                        {
-                          "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/Property"
-                        },
-                        {
-                          "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/Relationship"
+                      {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            {
+                              "type": "object"
+                            }
+                          ]
                         }
-                      ]
-                    }
+                      }
+                    ]
                   },
-                  "GeoProperty": {
+                  "location": {
                     "type": "object",
                     "properties": {
                       "type": {
@@ -586,7 +535,7 @@
                                 ]
                               },
                               "coordinates": {
-                                "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty/properties/value/definitions/position"
+                                "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/value/definitions/position"
                               }
                             }
                           },
@@ -599,7 +548,7 @@
                                 ]
                               },
                               "coordinates": {
-                                "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty/properties/value/definitions/positionArray"
+                                "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/value/definitions/positionArray"
                               }
                             }
                           },
@@ -612,7 +561,7 @@
                                 ]
                               },
                               "coordinates": {
-                                "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty/properties/value/definitions/lineString"
+                                "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/value/definitions/lineString"
                               }
                             }
                           },
@@ -627,7 +576,7 @@
                               "coordinates": {
                                 "type": "array",
                                 "items": {
-                                  "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty/properties/value/definitions/lineString"
+                                  "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/value/definitions/lineString"
                                 }
                               }
                             }
@@ -641,7 +590,7 @@
                                 ]
                               },
                               "coordinates": {
-                                "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty/properties/value/definitions/polygon"
+                                "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/value/definitions/polygon"
                               }
                             }
                           },
@@ -656,7 +605,7 @@
                               "coordinates": {
                                 "type": "array",
                                 "items": {
-                                  "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty/properties/value/definitions/polygon"
+                                  "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/value/definitions/polygon"
                                 }
                               }
                             }
@@ -681,14 +630,14 @@
                             "description": "An array of positions",
                             "type": "array",
                             "items": {
-                              "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty/properties/value/definitions/position"
+                              "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/value/definitions/position"
                             }
                           },
                           "lineString": {
                             "description": "An array of two or more positions",
                             "allOf": [
                               {
-                                "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty/properties/value/definitions/positionArray"
+                                "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/value/definitions/positionArray"
                               },
                               {
                                 "minItems": 2
@@ -699,7 +648,7 @@
                             "description": "An array of four positions where the first equals the last",
                             "allOf": [
                               {
-                                "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty/properties/value/definitions/positionArray"
+                                "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/value/definitions/positionArray"
                               },
                               {
                                 "minItems": 4
@@ -710,25 +659,28 @@
                             "description": "An array of linear rings",
                             "type": "array",
                             "items": {
-                              "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty/properties/value/definitions/linearRing"
+                              "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/value/definitions/linearRing"
                             }
                           }
                         }
                       },
                       "observedAt": {
-                        "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/Property/properties/observedAt"
+                        "type": "string",
+                        "format": "date-time"
                       },
                       "createdAt": {
-                        "$ref": "#/paths/~1entities~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/createdAt"
+                        "$ref": "#/paths/~1entities~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/allOf/0/properties/createdAt"
                       },
                       "modifiedAt": {
-                        "$ref": "#/paths/~1entities~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/modifiedAt"
+                        "$ref": "#/paths/~1entities~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/allOf/0/properties/modifiedAt"
                       },
                       "datasetId": {
-                        "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/datasetId"
+                        "type": "string",
+                        "format": "uri"
                       },
                       "instanceId": {
-                        "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/instanceId"
+                        "type": "string",
+                        "format": "uri"
                       }
                     },
                     "required": [
@@ -738,96 +690,125 @@
                     "additionalProperties": {
                       "anyOf": [
                         {
-                          "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/Property"
+                          "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/additionalProperties/anyOf/0"
                         },
                         {
-                          "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/Relationship"
+                          "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/additionalProperties/anyOf/1"
                         }
                       ]
                     }
                   },
-                  "Entity": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "string",
-                        "format": "uri"
-                      },
-                      "type": {
-                        "$ref": "#/paths/~1entities~1%7BentityId%7D/get/parameters/2/schema"
-                      },
-                      "@context": {
-                        "anyOf": [
-                          {
-                            "type": "object"
-                          },
-                          {
-                            "type": "string",
-                            "format": "uri"
-                          },
-                          {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {
-                              "anyOf": [
-                                {
-                                  "type": "string",
-                                  "format": "uri"
-                                },
-                                {
-                                  "type": "object"
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      },
-                      "location": {
-                        "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty"
-                      },
-                      "observationSpace": {
-                        "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty"
-                      },
-                      "operationSpace": {
-                        "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty"
-                      },
-                      "createdAt": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "modifiedAt": {
-                        "type": "string",
-                        "format": "date-time"
-                      }
-                    },
-                    "required": [
-                      "id",
-                      "type"
-                    ],
-                    "additionalProperties": {
-                      "anyOf": [
-                        {
-                          "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/Property"
-                        },
-                        {
-                          "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/Relationship"
-                        },
-                        {
-                          "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/GeoProperty"
-                        }
-                      ]
-                    },
-                    "propertyNames": {
-                      "type": "string",
-                      "pattern": "^((\\d|[a-zA-Z]|_)+(#\\d+)?)$|^(@context)$"
-                    }
+                  "observationSpace": {
+                    "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location"
+                  },
+                  "operationSpace": {
+                    "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location"
                   }
                 },
-                "allOf": [
-                  {
-                    "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/definitions/Entity"
-                  }
-                ]
+                "required": [
+                  "id",
+                  "type"
+                ],
+                "additionalProperties": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "const": "Property"
+                        },
+                        "value": {
+                          "type": [
+                            "string",
+                            "number",
+                            "boolean",
+                            "array",
+                            "object"
+                          ]
+                        },
+                        "observedAt": {
+                          "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/observedAt"
+                        },
+                        "createdAt": {
+                          "$ref": "#/paths/~1entities~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/allOf/0/properties/createdAt"
+                        },
+                        "modifiedAt": {
+                          "$ref": "#/paths/~1entities~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/allOf/0/properties/modifiedAt"
+                        },
+                        "datasetId": {
+                          "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/datasetId"
+                        },
+                        "instanceId": {
+                          "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/instanceId"
+                        }
+                      },
+                      "required": [
+                        "type",
+                        "value"
+                      ],
+                      "additionalProperties": {
+                        "anyOf": [
+                          {
+                            "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/additionalProperties/anyOf/0"
+                          },
+                          {
+                            "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/additionalProperties/anyOf/1"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "const": "Relationship"
+                        },
+                        "object": {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        "observedAt": {
+                          "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/observedAt"
+                        },
+                        "createdAt": {
+                          "$ref": "#/paths/~1entities~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/allOf/0/properties/createdAt"
+                        },
+                        "modifiedAt": {
+                          "$ref": "#/paths/~1entities~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/allOf/0/properties/modifiedAt"
+                        },
+                        "datasetId": {
+                          "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/datasetId"
+                        },
+                        "instanceId": {
+                          "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location/properties/instanceId"
+                        }
+                      },
+                      "required": [
+                        "type",
+                        "object"
+                      ],
+                      "additionalProperties": {
+                        "anyOf": [
+                          {
+                            "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/additionalProperties/anyOf/0"
+                          },
+                          {
+                            "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/additionalProperties/anyOf/1"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "$ref": "#/paths/~1entities~1%7BentityId%7D~1attrs~1/post/requestBody/content/application~1json%3Bapplication~1ld%2Bjson/schema/properties/location"
+                    }
+                  ]
+                },
+                "propertyNames": {
+                  "type": "string",
+                  "pattern": "^((\\d|[a-zA-Z]|_)+(#\\d+)?)$|^(@context)$"
+                }
               }
             }
           }

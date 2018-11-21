@@ -68,106 +68,125 @@
           "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/geometry"
         }
       }
-    }
-  },
-  "type": "object",
-  "properties": {
-    "id": {
-      "type": "string",
-      "format": "uri"
     },
-    "type": {
-      "type": "string",
-      "const": "Subscription"
+    "SubscriptionFragment": {
+      "type": "object",
+      "properties": {
+        "@context": {
+          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
+        },
+        "entities": {
+          "type": "array",
+          "items": {
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/EntityInfo"
+          },
+          "minItems": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "watchedAttributes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
+          },
+          "uniqueItems": true
+        },
+        "timeInterval": {
+          "type": "number",
+          "minimum": 0
+        },
+        "expires": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "throttling": {
+          "type": "number",
+          "minimum": 1
+        },
+        "q": {
+          "type": "string"
+        },
+        "geoQ": {
+          "$ref": "#/definitions/GeoQuery"
+        },
+        "csf": {
+          "type": "string"
+        }
+      }
     },
-    "@context": {
-      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
-    },
-    "entities": {
-      "type": "array",
-      "items": {
-        "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/EntityInfo"
-      },
-      "minItems": 1
-    },
-    "name": {
-      "type": "string",
-      "minLength": 1
-    },
-    "description": {
-      "type": "string",
-      "minLength": 1
-    },
-    "notification": {
-      "$ref": "#/definitions/NotificationParams"
-    },
-    "watchedAttributes": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
-      },
-      "uniqueItems": true
-    },
-    "timeInterval": {
-      "type": "number",
-      "minimum": 0
-    },
-    "expires": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "status": {
-      "type": "string",
-      "enum": [
-        "active",
-        "paused",
-        "expired"
-      ]
-    },
-    "isActive": {
-      "type": "boolean"
-    },
-    "throttling": {
-      "type": "number",
-      "minimum": 1
-    },
-    "q": {
-      "type": "string"
-    },
-    "geoQ": {
-      "$ref": "#/definitions/GeoQuery"  
-    },
-    "csf": {
-      "type": "string"
-    }
-  },
-  "createdAt": {
-    "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
-  },
-  "modifiedAt": {
-    "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
-  },
-  "allOf": [
-    {
-      "required": [
-        "id",
-        "type"
-      ]
-    },
-    {
-      "anyOf": [
+    "Subscription": {
+      "allOf": [
         {
-          "required": [
-            "entities"
-          ]
+          "$ref": "#/definitions/SubscriptionFragment"
         },
         {
-          "required": [
-            "watchedAttributes"
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uri"
+            },
+            "type": {
+              "type": "string",
+              "const": "Subscription"
+            },
+            "notification": {
+              "$ref": "#/definitions/NotificationParams"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "active",
+                "paused",
+                "expired"
+              ]
+            },
+            "createdAt": {
+              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
+            },
+            "modifiedAt": {
+              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
+            }
+          },
+          "allOf": [
+            {
+              "required": [
+                "id",
+                "type"
+              ]
+            },
+            {
+              "anyOf": [
+                {
+                  "required": [
+                    "entities"
+                  ]
+                },
+                {
+                  "required": [
+                    "watchedAttributes"
+                  ]
+                }
+              ]
+            }
           ]
         }
       ]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/Subscription"
     }
   ]
 }
