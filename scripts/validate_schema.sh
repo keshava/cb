@@ -16,6 +16,8 @@ ajv compile -s $SCHEMAS/EntityList.json -r $SCHEMAS/common.json -r $SCHEMAS/geom
 
 ajv compile -s $SCHEMAS/subscriptions/SubscriptionList.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json -r $SCHEMAS/subscriptions/Subscription.json
 
+ajv compile -s $SCHEMAS/registrations/ContextSourceRegistrationList.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json -r $SCHEMAS/registrations/ContextSourceRegistration.json
+
 ajv compile -s $SCHEMAS/temporal/EntityTemporalList.json  -r $SCHEMAS/temporal/EntityTemporal.json -r $SCHEMAS/Entity.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json
 
 ajv compile -s $SCHEMAS/BatchOperationResult.json -r $SCHEMAS/common.json

@@ -1,0 +1,90 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "NGSI-LD Registrations",
+    "version": "latest"
+  },
+  "components": {
+    "parameters": {
+    }
+  },
+  "paths": {
+    "/csourceRegistrations/": {
+      "get": {
+        "description": "Retrieve a set of context sources which matches a specific query from an NGSI-LD system",
+        "operationId": "queryCsources",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/limit"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/registrations/ContextSourceRegistrationList.json#/definitions/ContextSourceRegistrationList"
+                },
+                "examples": {
+                  "simple": {
+                    "externalValue": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/examples/ContextSourceRegistrationList-example.json"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Registers a new context source within an NGSI-LD system",
+        "operationId": "registerCsource",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json;application/ld+json": {
+              "schema": {
+                "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/registrations/ContextSourceRegistration.json#/definitions/ContextSourceRegistration"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created. Contains the resource URI of the created Registration"
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Already exists",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
