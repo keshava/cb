@@ -5,7 +5,7 @@
     "version": "latest"
   },
   "components": {
-    "parameters": [
+    "parameters": {
       "limit": {
         "name": "limit",
         "description": "Pagination limit",
@@ -16,7 +16,7 @@
           "minimum": 1
         }
       }
-    ]
+    }
   },
   "paths": {
     "/subscriptions/": {
