@@ -1,0 +1,77 @@
+[{
+  "id": "urn:ngsi-ld:ContextSourceRegistration:csr1a3456",
+  "type": "ContextSourceRegistration",
+  "information": [
+    {
+      "entities": [
+        {
+          "id": "urn:ngsi-ld:Vehicle:A456",
+          "type": "Vehicle"
+        }
+      ],
+      "properties": [
+        "brandName",
+        "speed"
+      ],
+      "relationships": [
+        "isParked"
+      ]
+    },
+    {
+      "entities": [
+        {
+          "idPattern": ".*downtown$",
+          "type": "OffStreetParking"
+        },
+        {
+          "idPattern": ".*47$",
+          "type": "OffStreetParking"
+        }
+      ],
+      "properties": [
+        "availableSpotNumber",
+        "totalSpotNumber"
+      ],
+      "relationships": [
+        "isNextToBuilding"
+      ]
+    }
+  ],
+  "endpoint": "http://my.csource.org:1026",
+  "location": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          100.0,
+          0.0
+        ],
+        [
+          101.0,
+          0.0
+        ],
+        [
+          101.0,
+          1.0
+        ],
+        [
+          100.0,
+          1.0
+        ],
+        [
+          100.0,
+          0.0
+        ]
+      ]
+    ]
+  },
+  "timestamp": [{
+    "start": "2017-11-29T14:53:15Z"
+  }],
+  "@context": [
+    "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/coreContext/ngsi-ld-core-context.json",
+    "http://example.org/cim/commonTerms.jsonld",
+    "http://example.org/cim/vehicle.jsonld",
+    "http://example.org/cim/parking.jsonld"
+  ]
+}]
