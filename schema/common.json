@@ -150,13 +150,13 @@
         "MultiPolygon"
       ]
     },
-	"timerel": {
-		"type": "string",
-		"enum": [
-			"before",
-			"after",
-			"between"
-		]
-	}
+    "timerel": {
+      "type": "string",
+      "enumeration": [
+        "before",
+        "after",
+        "between"
+      ]
+    }
   }
 }
