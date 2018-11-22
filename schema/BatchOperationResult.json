@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://uri.etsi.org/ngsi-ld/schema/BatchOperationResult.json",
+  "id": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/BatchOperationResult.json",
   "title": "NGSI-LD Batch Operation Result",
   "description": "NGSI-LD Batch Operation Result",
   "definitions": {
@@ -12,22 +12,29 @@
       "error": {
         "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
       }
+    },
+    "BatchOperationResult": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "error": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BatchEntityError"
+          }
+        }
+      }
     }
   },
-  "type": "object",
-  "properties": {
-    "success": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "format": "uri"
-      }
-    },
-    "error": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/BatchEntityError"
-      }
+  "allOf": [
+    {
+      "$ref": "#/definitions/BatchOperationResult"
     }
-  }
+  ]
 }
