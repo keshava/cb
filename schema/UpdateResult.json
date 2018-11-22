@@ -10,25 +10,32 @@
         "pattern": ""
       },
       "reason": {
-        "type":"string",
+        "type": "string",
         "minLenght": 1
+      }
+    },
+    "UpdateResult": {
+      "type": "object",
+      "properties": {
+        "updated": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": ""
+          }
+        },
+        "unchanged": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UnchangedDetails"
+          }
+        }
       }
     }
   },
-  "type": "object",
-  "properties": {
-    "updated": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "pattern": ""
-      }
-    },
-    "unchanged": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/UnchangedDetails"
-      }
+  "allOf": [
+    {
+      "$ref": "#/definitions/UpdateResult"
     }
-  }
+  ]
 }
