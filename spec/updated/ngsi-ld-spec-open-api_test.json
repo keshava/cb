@@ -90,19 +90,19 @@
       "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-operations-spec.json#/paths/%2FentityOperations%2Fdelete"  
     },
     "/temporal/entities/": {
-      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal-entities-spec.json#/paths/%2Ftemporal%2Fentities%2F"  
+      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entities-spec.json#/paths/%2Ftemporal%2Fentities%2F"  
     },
     "/temporal/entities/{entityId}": {
-      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal-entity-by-id-spec.json#/paths/%2Ftemporal%2Fentities%2F%7BentityId%7D"  
+      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entity-by-id-spec.json#/paths/%2Ftemporal%2Fentities%2F%7BentityId%7D"  
     },
     "/temporal/entities/{entityId}/attrs/": {
-      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal-entity-attrs-spec.json#/paths/%2Ftemporal%2Fentities%2F%7BentityId%7D%2Fattrs%2F"  
+      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entity-attrs-spec.json#/paths/%2Ftemporal%2Fentities%2F%7BentityId%7D%2Fattrs%2F"  
     },
      "/temporal/entities/{entityId}/attrs/{attrId}": {
-      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal-entity-attrs-spec.json#/paths/%2Ftemporal%2Fentities%2F%7BentityId%7D%2Fattrs%2F%7BattrId%7D"  
+      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entity-attrs-spec.json#/paths/%2Ftemporal%2Fentities%2F%7BentityId%7D%2Fattrs%2F%7BattrId%7D"  
     },
      "/temporal/entities/{entityId}/attrs/{attrId}/{instanceId}": {
-      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal-entity-attrs-spec.json#/paths/%2Ftemporal%2Fentities%2F%7BentityId%7D%2Fattrs%2F%7BattrId%7D%7BinstanceId%7D"  
+      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entity-attrs-spec.json#/paths/%2Ftemporal%2Fentities%2F%7BentityId%7D%2Fattrs%2F%7BattrId%7D%7BinstanceId%7D"  
     }
   }
 }
