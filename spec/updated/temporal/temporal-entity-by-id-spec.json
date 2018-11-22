@@ -20,9 +20,24 @@
           },
           {
             "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/type"
-          },
+          },  
           {
             "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/options"
+          },
+          {
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/timerel"
+          },
+          {
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/timeproperty"
+          },
+          {
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/time"
+          },
+          {
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/endTime"
+          },
+          {
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/lastN"
           }
         ],
         "responses": {
@@ -31,7 +46,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/EntityTemporal.json#/definitions/EntityTemporal"
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/temporal/EntityTemporal.json#/definitions/EntityTemporal"
                 },
                 "examples": {
                   "simple": {
@@ -64,14 +79,14 @@
         }
       },
       "delete": {
-        "description": "Removes an specific Entity from an NGSI-LD system",
-        "operationId": "removeEntityById",
+        "description": "Removes the temporal representation of an Entity from an NGSI-LD system",
+        "operationId": "removeEntityTemporalById",
         "parameters": [
           {
-            "$ref": "#/components/parameters/entityId"
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/entityId"
           },
           {
-            "$ref": "#/components/parameters/type"
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/type"
           }
         ],
         "responses": {
