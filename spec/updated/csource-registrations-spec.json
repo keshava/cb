@@ -13,6 +13,7 @@
       "get": {
         "description": "Retrieve a set of context sources which matches a specific query from an NGSI-LD system",
         "operationId": "queryCsources",
+        "tags": ["Context Sources"],
         "parameters": [
           {
             "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/id"
@@ -76,6 +77,7 @@
       "post": {
         "description": "Registers a new context source within an NGSI-LD system",
         "operationId": "registerCsource",
+        "tags": ["Context Sources"],
         "requestBody": {
           "required": true,
           "content": {

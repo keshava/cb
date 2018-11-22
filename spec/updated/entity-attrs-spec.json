@@ -44,6 +44,7 @@
       "post": {
         "description": "Append new Entity attributes to an existing Entity within an NGSI-LD system",
         "operationId": "appendEntityAttrs",
+        "tags": ["Context Information"],
         "parameters": [
           {
             "$ref": "#/components/parameters/entityId"
@@ -101,6 +102,7 @@
       "patch": {
         "description": "Update existing Entity attributes within an NGSI-LD system",
         "operationId": "updateEntityAttrs",
+        "tags": ["Context Information"],
         "parameters": [
           {
             "$ref": "#/components/parameters/entityId"
@@ -157,6 +159,7 @@
       "patch": {
         "description": "Update existing Entity attributes within an NGSI-LD system",
         "operationId": "partialAttrUpdate",
+        "tags": ["Context Information"],
         "parameters": [
           {
             "$ref": "#/components/parameters/entityId"
@@ -204,6 +207,7 @@
       "delete": {
         "description": "Removes an existing Entity attribute within an NGSI-LD system",
         "operationId": "removeEntityAttr",
+        "tags": ["Context Information"],
         "parameters": [
           {
             "$ref": "#/components/parameters/entityId"

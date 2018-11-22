@@ -23,6 +23,7 @@
       "get": {
          "description": "Retrieves a specific Subscription from an NGSI-LD system",
          "operationId": "retrieveSubscription",
+         "tags": ["Context Subscriptions"],
         "parameters": [
           {
             "$ref": "#/components/parameters/subscriptionId"
@@ -69,6 +70,7 @@
       "patch": {
         "description": "Updates a specific Subscription within an NGSI-LD system",
         "operationId": "updateSubscription",
+        "tags": ["Subscriptions"],
         "parameters": [
           {
             "$ref": "#/components/parameters/subscriptionId"
@@ -113,6 +115,7 @@
       "delete": {
         "description": "Removes a specific Subscription from an NGSI-LD system",
         "operationId": "removeSubscription",
+        "tags": ["Subscriptions"],
         "parameters": [
           {
             "$ref": "#/components/parameters/subscriptionId"

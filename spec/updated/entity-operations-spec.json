@@ -10,6 +10,7 @@
       "post": {
         "description": "Batch Entity creation",
         "operationId": "batchEntityCreation",
+        "tags": ["Batch Operations"],
         "requestBody": {
           "required": true,
           "content": {
@@ -48,6 +49,7 @@
       "post": {
         "description": "Batch Entity update",
         "operationId": "batchEntityUpdate",
+        "tags": ["Batch Operations"],
         "parameters": [
           {
             "name": "options",
@@ -99,6 +101,7 @@
       "post": {
         "description": "Batch Entity upsert",
         "operationId": "batchEntityUpsert",
+        "tags": ["Batch Operations"],
         "parameters": [
           {
             "name": "options",
@@ -151,6 +154,7 @@
       "post": {
         "description": "Batch Entity delete",
         "operationId": "batchEntityDelete",
+        "tags": ["Batch Operations"],
         "requestBody": {
           "required": true,
           "content": {

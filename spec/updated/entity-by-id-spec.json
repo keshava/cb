@@ -42,6 +42,7 @@
       "get": {
         "description": "Retrieve an specific Entity from an NGSI-LD system. It's possible to specify the Entity attributes to be retrieved by using query parameters",
         "operationId": "retrieveEntityById",
+        "tags": ["Context Information"],
         "parameters": [
           {
             "$ref": "#/components/parameters/entityId"
@@ -97,6 +98,7 @@
       "delete": {
         "description": "Removes an specific Entity from an NGSI-LD system",
         "operationId": "removeEntityById",
+        "tags": ["Context Information"],
         "parameters": [
           {
             "$ref": "#/components/parameters/entityId"

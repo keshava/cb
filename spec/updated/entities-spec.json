@@ -130,6 +130,7 @@
       "get": {
         "description": "Retrieve a set of entities which matches a specific query from an NGSI-LD system",
         "operationId": "queryEntities",
+        "tags": ["Context Information"],
         "parameters": [
           {
             "$ref": "#/components/parameters/id"
@@ -199,6 +200,7 @@
       "post": {
         "description": "Create a new Entity within an NGSI-LD system",
         "operationId": "createEntity",
+        "tags": ["Context Information"]
         "requestBody": {
           "required": true,
           "content": {

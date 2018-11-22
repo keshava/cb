@@ -23,6 +23,7 @@
       "get": {
          "description": "Retrieves a specific Subscription from an NGSI-LD system",
          "operationId": "retrieveSubscription",
+         "tags": ["Context Sources"],
         "parameters": [
           {
             "$ref": "#/components/parameters/subscriptionId"
@@ -69,6 +70,7 @@
       "patch": {
         "description": "Updates a specific context source discovery Subscription within an NGSI-LD system",
         "operationId": "updateCSourceSubscription",
+        "tags": ["Context Sources"]
         "parameters": [
           {
             "$ref": "#/components/parameters/subscriptionId"
@@ -111,8 +113,9 @@
         }
       },
       "delete": {
-        "description": "Removes a specific Subscription from an NGSI-LD system",
-        "operationId": "removeSubscription",
+        "description": "Removes a specific Context Source Subscription from an NGSI-LD system",
+        "operationId": "removeCSourceSubscription",
+        "tags": ["Context Sources"]
         "parameters": [
           {
             "$ref": "#/components/parameters/subscriptionId"
