@@ -1,0 +1,105 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "NGSI-LD Entity Temporal By Id",
+    "version": "latest"
+  },
+  "components": {
+  },
+  "paths": {
+    "/temporal/entities/{entityId}": {
+      "get": {
+        "description": "Retrieve the temporal representation of an specific Entity from an NGSI-LD system. It's possible to specify the Entity attributes to be retrieved by using query parameters",
+        "operationId": "retrieveEntityTemporalById",
+        "parameters": [
+          {
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/entityId"
+          },
+          {
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/attrs"
+          },
+          {
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/type"
+          },
+          {
+            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/options"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/EntityTemporal.json#/definitions/EntityTemporal"
+                },
+                "examples": {
+                  "simple": {
+                    "externalValue": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/examples/EntityTemporal-example.json"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Removes an specific Entity from an NGSI-LD system",
+        "operationId": "removeEntityById",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/entityId"
+          },
+          {
+            "$ref": "#/components/parameters/type"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content. The entity was removed successfully"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
