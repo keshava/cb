@@ -51,7 +51,7 @@
         "required": false,
         "schema": {
           "type": "integer",
-          "minValue": 1
+          "minimum": 1
         }
       },
       "options": {
@@ -61,7 +61,10 @@
         "required": false,
         "schema": {
           "type": "string",
-          "enum": ["temporalValues", "sysAttrs"]
+          "enum": [
+            "temporalValues",
+            "sysAttrs"
+          ]
         }
       }
     }
@@ -130,7 +133,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/EntityTemporalList.json#/definitions/EntityTemporalList"
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/temporal/EntityTemporalList.json#/definitions/EntityTemporalList"
                 },
                 "examples": {
                   "simple": {
@@ -160,7 +163,12 @@
           "content": {
             "application/json;application/ld+json": {
               "schema": {
-                "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/EntityTemporal.json#/definitions/EntityTemporal"
+                "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/temporal/EntityTemporal.json#/definitions/EntityTemporal"
+              },
+              "examples": {
+                "simple": {
+                  "externalValue": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/examples/EntityTemporal-example_C5.5.3.json"
+                }
               }
             }
           }

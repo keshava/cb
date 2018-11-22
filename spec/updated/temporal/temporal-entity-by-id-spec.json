@@ -35,7 +35,7 @@
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/examples/EntityTemporal-example.json"
+                    "externalValue": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/examples/EntityTemporal-example_C5.5.3.json"
                   }
                 }
               }
