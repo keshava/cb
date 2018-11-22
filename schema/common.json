@@ -141,7 +141,7 @@
     },
     "geometry": {
       "type": "string",
-      "enumeration": [
+      "enum": [
         "Point",
         "MultiPoint",
         "LineString",
@@ -152,7 +152,7 @@
     },
     "timerel": {
       "type": "string",
-      "enumeration": [
+      "enum": [
         "before",
         "after",
         "between"

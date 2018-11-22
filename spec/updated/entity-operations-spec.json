@@ -2,14 +2,13 @@
   "openapi": "3.0.1",
   "info": {
     "title": "NGSI-LD Entity Operations",
-    "version": "latest"
+    "version": "0.1"
   },
-  "components": {
-  },
+  "components": {},
   "paths": {
     "/entityOperations/create": {
       "post": {
-      "description": "Batch Entity creation",
+        "description": "Batch Entity creation",
         "operationId": "batchEntityCreation",
         "requestBody": {
           "required": true,
@@ -25,12 +24,12 @@
           "200": {
             "description": "Success",
             "content": {
-            "application/json;application/ld+json": {
-              "schema": {
-                "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/BatchOperationResult.json#/definitions/BatchOperationResult"
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/BatchOperationResult.json#/definitions/BatchOperationResult"
+                }
               }
             }
-          }
           },
           "400": {
             "description": "Bad request",
@@ -41,16 +40,155 @@
                 }
               }
             }
-          },
-          
+          }
         }
       }
     },
     "/entityOperations/update": {
+      "post": {
+        "description": "Batch Entity update",
+        "operationId": "batchEntityUpdate",
+        "parameters": [
+          {
+            "name": "options",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "noOverwrite"
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json;application/ld+json": {
+              "schema": {
+                "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/EntityList.json#/definitions/EntityList"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/BatchOperationResult.json#/definitions/BatchOperationResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
     },
     "/entityOperations/upsert": {
+      "post": {
+        "description": "Batch Entity upsert",
+        "operationId": "batchEntityUpsert",
+        "parameters": [
+          {
+            "name": "options",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "replace",
+                "update"
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json;application/ld+json": {
+              "schema": {
+                "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/EntityList.json#/definitions/EntityList"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/BatchOperationResult.json#/definitions/BatchOperationResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
     },
     "/entityOperations/delete": {
+      "post": {
+        "description": "Batch Entity delete",
+        "operationId": "batchEntityDelete",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json;application/ld+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "minItems": 1
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/BatchOperationResult.json#/definitions/BatchOperationResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
