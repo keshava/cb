@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "NGSI-LD Entity Attributes",
+    "title": "NGSI-LD Temporal Entity Attributes",
     "version": "latest"
   },
   "components": {
@@ -25,16 +25,14 @@
           "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
         }
       },
-      "options": {
-        "name": "options",
-        "description": "Indicates that no attribute overwrite shall be performed",
-        "in": "query",
-        "required": false,
+      "instanceId": {
+        "name": "instanceId",
+        "description": "Instance Id",
+        "in": "path",
+        "required": true,
         "schema": {
           "type": "string",
-          "enum": [
-            "noOverwrite"
-          ]
+          "format": "uri"
         }
       }
     }
@@ -42,14 +40,11 @@
   "paths": {
     "/temporal/entities/{entityId}/attrs/": {
       "post": {
-        "description": "Append new Entity attributes to an existing Entity within an NGSI-LD system",
-        "operationId": "appendEntityAttrs",
+        "description": "Add new attributes to an existing Temporal Entity within an NGSI-LD system",
+        "operationId": "addTemporalEntityAttrs",
         "parameters": [
           {
             "$ref": "#/components/parameters/entityId"
-          },
-          {
-            "$ref": "#/components/parameters/options"
           }
         ],
         "requestBody": {
@@ -57,7 +52,7 @@
           "content": {
             "application/json;application/ld+json": {
               "schema": {
-                "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/EntityFragment"
+                "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/temporal/EntityTemporal.json#/definitions/EntityTemporalFragment"
               }
             }
           }
@@ -65,16 +60,6 @@
         "responses": {
           "204": {
             "description": "No Content"
-          },
-          "207": {
-            "description": "Partial Success. Only the attributes included in the response payload were successfully appended",
-            "content": {
-              "application/json;application/ld+json": {
-                "schema": {
-                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/UpdateResult.json#"
-                }
-              }
-            }
           },
           "400": {
             "description": "Bad request",
@@ -97,38 +82,23 @@
             }
           }
         }
-      },
-      "patch": {
-        "description": "Update existing Entity attributes within an NGSI-LD system",
-        "operationId": "updateEntityAttrs",
+      }
+    },
+    "/temporal/entities/{entityId}/attrs/{attrId}": {
+      "delete": {
+        "description": "Attribute from Temporal Representation of Entity deletion",
+        "operationId": "removeEntityTemporalAttr",
         "parameters": [
           {
             "$ref": "#/components/parameters/entityId"
+          },
+          {
+            "$ref": "#/components/parameters/attrId"
           }
         ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json;application/ld+json": {
-              "schema": {
-                "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/EntityFragment"
-              }
-            }
-          }
-        },
         "responses": {
           "204": {
             "description": "No Content."
-          },
-          "207": {
-            "description": "Partial Success. Only the attributes included in the response payload were successfully updated",
-            "content": {
-              "application/json;application/ld+json": {
-                "schema": {
-                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/UpdateResult.json#"
-                }
-              }
-            }
           },
           "400": {
             "description": "Bad Request",
@@ -153,16 +123,19 @@
         }
       }
     },
-    "/temporal/entities/{entityId}/attrs/{attrId}": {
+    "/temporal/entities/{entityId}/attrs/{attrId}/{instanceId}": {
       "patch": {
-        "description": "Update existing Entity attributes within an NGSI-LD system",
-        "operationId": "partialAttrUpdate",
+        "description": "Allows modifying a specific Attribute (Property or Relationship) instance, identified by its instanceId, of a Temporal Representation of an Entity.",
+        "operationId": "modifyEntityTemporalAttrInstance",
         "parameters": [
           {
             "$ref": "#/components/parameters/entityId"
           },
           {
             "$ref": "#/components/parameters/attrId"
+          },
+          {
+            "$ref": "#/components/parameters/instanceId"
           }
         ],
         "requestBody": {
@@ -170,17 +143,17 @@
           "content": {
             "application/json;application/ld+json": {
               "schema": {
-                "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/EntityFragment"
+                "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/temporal/EntityTemporal.json#/definitions/EntityTemporalFragment"
               }
             }
           }
         },
         "responses": {
           "204": {
-            "description": "No Content."
+            "description": "No Content"
           },
           "400": {
-            "description": "Bad Request",
+            "description": "Bad request",
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
@@ -202,14 +175,17 @@
         }
       },
       "delete": {
-        "description": "Removes an existing Entity attribute within an NGSI-LD system",
-        "operationId": "removeEntityAttr",
+        "description": "Attribute Instance deletion by instance id.",
+        "operationId": "removeEntityTemporalAttrInstance",
         "parameters": [
           {
             "$ref": "#/components/parameters/entityId"
           },
           {
             "$ref": "#/components/parameters/attrId"
+          },
+          {
+            "$ref": "#/components/parameters/instanceId"
           }
         ],
         "responses": {

@@ -156,8 +156,8 @@
         }
       },
       "post": {
-        "description": "Create temporal representation of an Entity within an NGSI-LD system",
-        "operationId": "createEntityTemporal",
+        "description": "Create or update temporal representation of an Entity within an NGSI-LD system",
+        "operationId": "createUpdateEntityTemporal",
         "requestBody": {
           "required": true,
           "content": {
@@ -176,6 +176,9 @@
         "responses": {
           "201": {
             "description": "Created. Contains the resource URI of the created Entity"
+          },
+          "204": {
+            "description": "Updated. No Content"
           },
           "400": {
             "description": "Bad request",
