@@ -75,7 +75,7 @@
       "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/csource-subscriptions-spec.json#/paths/%2FcsourceSubscriptions%2F"  
     },
     "/csourceSubscriptions/{subscriptionId}": {
-      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/subscription-by-id-spec.json#/paths/%2FcsourceSubscriptions%2F%7BsubscriptionId%7D"  
+      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/csource-subscription-by-id-spec.json#/paths/%2FcsourceSubscriptions%2F%7BsubscriptionId%7D"  
     },
     "/entityOperations/create": {
       "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-operations-spec.json#/paths/%2FentityOperations%2Fcreate"  
@@ -102,7 +102,7 @@
       "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entity-attrs-spec.json#/paths/%2Ftemporal%2Fentities%2F%7BentityId%7D%2Fattrs%2F%7BattrId%7D"  
     },
      "/temporal/entities/{entityId}/attrs/{attrId}/{instanceId}": {
-      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entity-attrs-spec.json#/paths/%2Ftemporal%2Fentities%2F%7BentityId%7D%2Fattrs%2F%7BattrId%7D%7BinstanceId%7D"  
+      "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entity-attrs-spec.json#/paths/%2Ftemporal%2Fentities%2F%7BentityId%7D%2Fattrs%2F%7BattrId%7D%2F%7BinstanceId%7D"  
     }
   }
 }
