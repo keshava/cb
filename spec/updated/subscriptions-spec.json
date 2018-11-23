@@ -24,7 +24,7 @@
         "description": "Retrieves the subscriptions available in an NGSI-LD system",
         "operationId": "retrieveSubscriptions",
         "tags":[
-          "Subscriptions"
+          "Context Subscription"
         ],
         "parameters": [
           {
@@ -63,7 +63,7 @@
         "description": "Creates a new Subscription within an NGSI-LD system",
         "operationId": "createSubscription",
         "tags":[
-          "Subscriptions"
+          "Context Subscription"
         ],
         "requestBody": {
           "required": true,

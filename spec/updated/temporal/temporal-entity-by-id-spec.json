@@ -11,6 +11,7 @@
       "get": {
         "description": "Retrieve the temporal representation of an specific Entity from an NGSI-LD system. It's possible to specify the Entity attributes to be retrieved by using query parameters",
         "operationId": "retrieveEntityTemporalById",
+        "tags": ["Temporal Evolution"],
         "parameters": [
           {
             "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/entityId"
@@ -81,6 +82,7 @@
       "delete": {
         "description": "Removes the temporal representation of an Entity from an NGSI-LD system",
         "operationId": "removeEntityTemporalById",
+        "tags": ["Temporal Evolution"],
         "parameters": [
           {
             "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/entityId"
