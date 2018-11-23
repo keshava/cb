@@ -60,7 +60,7 @@
       "post": {
         "description": "Creates a context source discovery Subscription within an NGSI-LD system",
         "operationId": "createCSourceSubscription",
-        "tags": ["Context Sources"]
+        "tags": ["Context Sources"],
         "requestBody": {
           "required": true,
           "content": {

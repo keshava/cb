@@ -70,7 +70,7 @@
       "patch": {
         "description": "Updates a specific context source discovery Subscription within an NGSI-LD system",
         "operationId": "updateCSourceSubscription",
-        "tags": ["Context Sources"]
+        "tags": ["Context Sources"],
         "parameters": [
           {
             "$ref": "#/components/parameters/subscriptionId"
@@ -115,7 +115,7 @@
       "delete": {
         "description": "Removes a specific Context Source Subscription from an NGSI-LD system",
         "operationId": "removeCSourceSubscription",
-        "tags": ["Context Sources"]
+        "tags": ["Context Sources"],
         "parameters": [
           {
             "$ref": "#/components/parameters/subscriptionId"
