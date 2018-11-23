@@ -911,7 +911,7 @@
         "description": "Retrieves the subscriptions available in an NGSI-LD system",
         "operationId": "retrieveSubscriptions",
         "tags": [
-          "Subscriptions"
+          "Context Subscription"
         ],
         "parameters": [
           {
@@ -960,7 +960,7 @@
         "description": "Creates a new Subscription within an NGSI-LD system",
         "operationId": "createSubscription",
         "tags": [
-          "Subscriptions"
+          "Context Subscription"
         ],
         "requestBody": {
           "required": true,
@@ -1119,7 +1119,7 @@
         "description": "Retrieves a specific Subscription from an NGSI-LD system",
         "operationId": "retrieveSubscription",
         "tags": [
-          "Context Subscriptions"
+          "Context Subscription"
         ],
         "parameters": [
           {
@@ -1175,7 +1175,7 @@
         "description": "Updates a specific Subscription within an NGSI-LD system",
         "operationId": "updateSubscription",
         "tags": [
-          "Subscriptions"
+          "Context Subscription"
         ],
         "parameters": [
           {
@@ -1306,7 +1306,7 @@
         "description": "Removes a specific Subscription from an NGSI-LD system",
         "operationId": "removeSubscription",
         "tags": [
-          "Subscriptions"
+          "Context Subscription"
         ],
         "parameters": [
           {
@@ -2567,6 +2567,9 @@
       "get": {
         "description": "Retrieve the temporal representation of an specific Entity from an NGSI-LD system. It's possible to specify the Entity attributes to be retrieved by using query parameters",
         "operationId": "retrieveEntityTemporalById",
+        "tags": [
+          "Temporal Evolution"
+        ],
         "parameters": [
           {
             "$ref": "#/paths/~1entities~1%7BentityId%7D/get/parameters/0"
@@ -2637,6 +2640,9 @@
       "delete": {
         "description": "Removes the temporal representation of an Entity from an NGSI-LD system",
         "operationId": "removeEntityTemporalById",
+        "tags": [
+          "Temporal Evolution"
+        ],
         "parameters": [
           {
             "$ref": "#/paths/~1entities~1%7BentityId%7D/get/parameters/0"
