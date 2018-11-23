@@ -74,6 +74,7 @@
       "get": {
         "description": "Query temporal evolution of Entities from an NGSI-LD system",
         "operationId": "queryTemporalEntities",
+        "tags": ["Temporal Evolution"],
         "parameters": [
           {
             "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/id"
@@ -158,6 +159,7 @@
       "post": {
         "description": "Create or update temporal representation of an Entity within an NGSI-LD system",
         "operationId": "createUpdateEntityTemporal",
+        "tags": ["Temporal Evolution"],
         "requestBody": {
           "required": true,
           "content": {

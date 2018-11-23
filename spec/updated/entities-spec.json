@@ -200,7 +200,7 @@
       "post": {
         "description": "Create a new Entity within an NGSI-LD system",
         "operationId": "createEntity",
-        "tags": ["Context Information"]
+        "tags": ["Context Information"],
         "requestBody": {
           "required": true,
           "content": {

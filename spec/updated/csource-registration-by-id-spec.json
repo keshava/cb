@@ -23,6 +23,7 @@
       "get": {
         "description": "Retrieves a specific context source registration from an NGSI-LD system",
         "operationId": "retrieveCsource",
+        "tags": ["Context Sources"],
         "parameters": [
           {
             "$ref": "#/components/parameters/registrationId"
@@ -69,6 +70,7 @@
       "delete": {
         "description": "Removes an specific context source registration within an NGSI-LD system",
         "operationId": "removeCsource",
+        "tags": ["Context Sources"],
         "parameters": [
           {
             "$ref": "#/components/parameters/registrationId"
