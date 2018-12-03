@@ -1,5 +1,6 @@
 {
     "@context": {
+      "ngsi-ld": "http://uri.etsi.org/ngsi-ld/",    
       "id": "@id",
       "type": "@type",
       "value": "http://uri.etsi.org/ngsi-ld/hasValue",
