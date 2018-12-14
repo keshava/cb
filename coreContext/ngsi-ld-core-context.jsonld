@@ -59,11 +59,11 @@
       "entities": "http://uri.etsi.org/ngsi-ld/entities",
       "properties": {
         "@id": "http://uri.etsi.org/ngsi-ld/properties",
-        "@type": "@id"
+        "@type": "@vocab"
       },
       "relationships": {
         "@id": "http://uri.etsi.org/ngsi-ld/relationships",
-        "@type": "@id"
+        "@type": "@vocab"
       },
       "start": {
         "@id": "http://uri.etsi.org/ngsi-ld/start",
@@ -75,7 +75,7 @@
       },
       "watchedAttributes":{
         "@id": "http://uri.etsi.org/ngsi-ld/watchedAttributes",
-        "@type": "@id"
+        "@type": "@vocab"
       },
       "timeInterval": "http://uri.etsi.org/ngsi-ld/timeInterval",
       "q": "http://uri.etsi.org/ngsi-ld/q",
@@ -92,7 +92,7 @@
       "geoproperty": "http://uri.etsi.org/ngsi-ld/geoproperty",
       "attributes": {
         "@id": "http://uri.etsi.org/ngsi-ld/attributes",
-        "@type": "@id"
+        "@type": "@vocab"
       },
       "format": "http://uri.etsi.org/ngsi-ld/format",
       "timesSent": "http://uri.etsi.org/ngsi-ld/timesSent",
