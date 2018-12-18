@@ -156,6 +156,19 @@
         },
         "operationSpace": {
           "$ref": "#/definitions/GeoProperty"
+        },
+        "id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "type": {
+          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
+        },
+        "createdAt": {
+          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
+        },
+        "modifiedAt": {
+          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
         }
       },
       "additionalProperties": {
@@ -179,29 +192,13 @@
     "Entity": {
       "allOf": [
         {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "string",
-              "format": "uri"
-            },
-            "type": {
-              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
-            },
-            "createdAt": {
-              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
-            },
-            "modifiedAt": {
-              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
-            }
-          },
           "required": [
             "id",
             "type"
           ]
         },
         {
-          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/EntityFragment"
+          "$ref": "#/definitions/EntityFragment"
         }
       ]
     }
