@@ -162,7 +162,8 @@
             {
               "required": [
                 "id",
-                "type"
+                "type",
+                "notification"
               ]
             },
             {
