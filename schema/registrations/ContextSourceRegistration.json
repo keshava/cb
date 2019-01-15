@@ -6,8 +6,10 @@
   "definitions": {
     "RegistrationInfo": {
       "type": "object",
-      "required": [
-        "entities"
+	  "anyOf": [
+		{"required": ["entities"]},
+		{"required": ["properties"]},
+		{"required": ["relationships"]}
       ],
       "properties": {
         "entities": {
@@ -64,14 +66,19 @@
             "$ref": "#/definitions/RegistrationInfo"
           }
         },
-        "timestamp": {
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "$ref": "#/definitions/TimeInterval"
-          }
+        "observationInterval": {
+          "$ref": "#/definitions/TimeInterval"
+        },
+        "managementInterval": {
+          "$ref": "#/definitions/TimeInterval"
         },
         "location": {
+          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#"
+        },
+		"observationSpace": {
+          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#"
+        },
+		"operationSpace": {
           "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#"
         },
         "expires": {
