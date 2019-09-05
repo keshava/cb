@@ -5,6 +5,10 @@
     "type": "Property",
     "value": "Mercedes"
   },
+  "schema:image": {
+    "type": "Property",
+    "value": "http://example.org/images/Mercedes-C220"
+  },
   "isParked": {
     "type": "Relationship",
     "object": "urn:ngsi-ld:OffStreetParking:Downtown1",
@@ -18,6 +22,7 @@
     "http://example.org/ngsi-ld/commonTerms.jsonld",
     "http://example.org/ngsi-ld/vehicle.jsonld",
     "http://example.org/ngsi-ld/parking.jsonld",
+    "https://schema.org",
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
   ]
 }

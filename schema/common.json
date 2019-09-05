@@ -6,9 +6,13 @@
   "definitions": {
     "Name": {
       "type": "string",
-      "pattern": "^(\\d|[a-zA-Z]|_)+$",
+      "pattern": "^((\\d|[a-zA-Z]|_)+(:(\\d|[a-zA-Z]|_)+)?(#\\d+)?)$",
       "minLength": 1,
       "description": "NGSI-LD Name"
+    },
+    "PropertyNames": {
+      "type": "string",
+      "pattern": "^((\\d|[a-zA-Z]|_)+(:(\\d|[a-zA-Z]|_)+)?(#\\d+)?)$|^(@context)$"
     },
     "observedAt": {
       "type": "string",
