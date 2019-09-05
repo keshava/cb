@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json",
+  "$id": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json",
   "title": "NGSI-LD Entity",
   "description": "NGSI-LD Entity",
   "definitions": {
@@ -186,7 +186,7 @@
       },
       "propertyNames": {
         "type": "string",
-        "pattern": "^((\\d|[a-zA-Z]|_)+(#\\d+)?)$|^(@context)$"
+        "pattern": "^(((\\d|[a-zA-Z]|_)+(:((\\d|[a-zA-Z]|_))+)?(#\\d+)?)$|^(@context)$"
       }
     },
     "Entity": {
