@@ -4,9 +4,9 @@
   "brandName": "Mercedes",
   "isParked": "urn:ngsi-ld:OffStreetParking:Downtown1",
   "@context": [
-    "http://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
     "http://example.org/ngsi-ld/commonTerms.jsonld",
     "http://example.org/ngsi-ld/vehicle.jsonld",
-    "http://example.org/ngsi-ld/parking.jsonld"
+    "http://example.org/ngsi-ld/parking.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
   ]
 }
