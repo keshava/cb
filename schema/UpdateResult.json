@@ -4,7 +4,7 @@
   "title": "NGSI-LD Update Result",
   "description": "NGSI-LD Update Result",
   "definitions": {
-    "UnchangedDetails": {
+    "NotUpdatedDetails": {
       "attributeName": {
         "type": "string",
         "pattern": ""
@@ -24,10 +24,10 @@
             "pattern": ""
           }
         },
-        "unchanged": {
+        "notUpdated": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/UnchangedDetails"
+            "$ref": "#/definitions/NotUpdatedDetails"
           }
         }
       }
