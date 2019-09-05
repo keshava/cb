@@ -1,11 +1,11 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://uri.etsi.org/ngsi-ld/schema/Entity_keyValues.json",
+  "$id": "https://uri.etsi.org/ngsi-ld/schema/Entity_keyValues.json",
   "title": "NGSI-LD Entity Key Values",
   "description": "NGSI-LD Entity Simplified Representation",
   "type": "object",
   "properties": {
-    "id": {
+    "$id": {
       "type": "string",
       "format": "uri"
     },

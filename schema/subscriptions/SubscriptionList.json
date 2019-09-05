@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://uri.etsi.org/ngsi-ld/schema/SubscriptionList.json",
+  "$id": "https://uri.etsi.org/ngsi-ld/schema/SubscriptionList.json",
   "title": "NGSI-LD Subscription List",
   "description": "NGSI-LD Subscription List",
   "definitions": {

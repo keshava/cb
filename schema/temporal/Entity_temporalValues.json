@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://uri.etsi.org/ngsi-ld/schema/Entity_temporalValues.json",
+  "$id": "https://uri.etsi.org/ngsi-ld/schema/Entity_temporalValues.json",
   "title": "NGSI-LD Entity Temporal Values",
   "description": "NGSI-LD Simplified Temporal Representation of Entities",
   "definitions": {
@@ -83,7 +83,7 @@
   },
   "type": "object",
   "properties": {
-    "id": {
+    "$id": {
       "type": "string",
       "format": "uri"
     },

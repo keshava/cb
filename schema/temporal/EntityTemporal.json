@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/temporal/EntityTemporal.json",
+  "$id": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/temporal/EntityTemporal.json",
   "title": "NGSI-LD Entity",
   "description": "NGSI-LD Temporal Representation of an Entity",
   "definitions": {
@@ -31,7 +31,7 @@
           },
           "minItems": 1
         },
-        "id": {
+        "$id": {
           "type": "string",
           "format": "uri"
         },

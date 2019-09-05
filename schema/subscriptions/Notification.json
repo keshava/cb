@@ -1,11 +1,11 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://uri.etsi.org/ngsi-ld/schema/Notification.json",
+  "$id": "https://uri.etsi.org/ngsi-ld/schema/Notification.json",
   "title": "NGSI-LD Notification",
   "description": "NGSI-LD Notification",
   "type": "object",
   "properties": {
-    "id": {
+    "$id": {
       "type": "string",
       "format": "uri"
     },

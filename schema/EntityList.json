@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://uri.etsi.org/ngsi-ld/schema/EntityList.json",
+  "$id": "https://uri.etsi.org/ngsi-ld/schema/EntityList.json",
   "title": "NGSI-LD EntityList",
   "description": "NGSI-LD EntityList",
   "definitions": {

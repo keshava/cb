@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://uri.etsi.org/ngsi-ld/schema/UpdateResult.json",
+  "$id": "https://uri.etsi.org/ngsi-ld/schema/UpdateResult.json",
   "title": "NGSI-LD Update Result",
   "description": "NGSI-LD Update Result",
   "definitions": {

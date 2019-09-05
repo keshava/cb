@@ -1,11 +1,11 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://uri.etsi.org/ngsi-ld/schema/ContextSourceNotification.json",
+  "$id": "https://uri.etsi.org/ngsi-ld/schema/ContextSourceNotification.json",
   "title": "NGSI-LD Context Source Notification",
   "description": "NGSI-LD Context Source Notification",
   "type": "object",
   "properties": {
-    "id": {
+    "$id": {
       "type": "string",
       "format": "uri"
     },
