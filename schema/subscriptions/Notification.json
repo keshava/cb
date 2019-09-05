@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://uri.etsi.org/ngsi-ld/schema/Notification.json",
+  "$id": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/subscriptions/Notification.json",
   "title": "NGSI-LD Notification",
   "description": "NGSI-LD Notification",
   "type": "object",
