@@ -69,9 +69,9 @@
     "start": "2017-11-29T14:53:15Z"
   }],
   "@context": [
-    "http://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
     "http://example.org/ngsi-ld/commonTerms.jsonld",
     "http://example.org/ngsi-ld/vehicle.jsonld",
-    "http://example.org/ngsi-ld/parking.jsonld"
+    "http://example.org/ngsi-ld/parking.jsonld",  
+    "http://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
   ]
 }
