@@ -9,7 +9,7 @@
 		"coordinates": [-8.5, 41.2]
 	},
 	"@context": [
-		"http://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-		"http://example.org/ngsi-ld/parking.jsonld"
+		"http://example.org/ngsi-ld/parking.jsonld",
+		"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
 	]
 }
