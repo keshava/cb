@@ -157,7 +157,7 @@
         "operationSpace": {
           "$ref": "#/definitions/GeoProperty"
         },
-        "$id": {
+        "id": {
           "type": "string",
           "format": "uri"
         },
