@@ -150,8 +150,9 @@
       },
       "objects":{
           "@id": "https://uri.etsi.org/ngsi-ld/hasObjects",
-	  "@type": "@id",
-	  "@container": "@list"
-      }
+	      "@type": "@id",
+	      "@container": "@list"
+      },
+      "@vocab": "https://uri.etsi.org/ngsi-ld/default-context/"
     }
 }
