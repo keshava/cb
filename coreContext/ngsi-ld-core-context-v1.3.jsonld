@@ -14,7 +14,7 @@
     "DateTime": "ngsi-ld:DateTime",
     "EntityType": "ngsi-ld:EntityType",
     "EntityTypeInfo": "ngsi-ld:EntityTypeInfo",
-	"EntityTypeList": "ngsi-ld:EntityTypeList",
+    "EntityTypeList": "ngsi-ld:EntityTypeList",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeoProperty": "ngsi-ld:GeoProperty",
