@@ -7,6 +7,6 @@
     "http://example.org/ngsi-ld/commonTerms.jsonld",
     "http://example.org/ngsi-ld/vehicle.jsonld",
     "http://example.org/ngsi-ld/parking.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld"
   ]
 }

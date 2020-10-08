@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/subscriptions/Subscription.json",
+  "$id": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/subscriptions/Subscription.json",
   "title": "NGSI-LD Subscription",
   "description": "NGSI-LD Subscription",
   "definitions": {
@@ -20,7 +20,7 @@
           "type": "string"
         },
         "endpoint": {
-          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Endpoint"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Endpoint"
         },
         "status": {
           "type": "string",
@@ -59,13 +59,13 @@
       ],
       "properties": {
         "georel": {
-          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/georel"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/georel"
         },
         "coordinates": {
-          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/coordinates"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/coordinates"
         },
         "geometry": {
-          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/geometry"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/geometry"
         }
       }
     },
@@ -73,12 +73,12 @@
       "type": "object",
       "properties": {
         "@context": {
-          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
         },
         "entities": {
           "type": "array",
           "items": {
-            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/EntityInfo"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/EntityInfo"
           },
           "minItems": 1
         },
@@ -94,7 +94,7 @@
           "type": "array",
           "minItems": 1,
           "items": {
-            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
           },
           "uniqueItems": true
         },
@@ -152,10 +152,10 @@
               ]
             },
             "createdAt": {
-              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
+              "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
             },
             "modifiedAt": {
-              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
+              "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
             }
           },
           "allOf": [
