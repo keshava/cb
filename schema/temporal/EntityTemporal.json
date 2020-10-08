@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/temporal/EntityTemporal.json",
+  "$id": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/temporal/EntityTemporal.json",
   "title": "NGSI-LD Entity",
   "description": "NGSI-LD Temporal Representation of an Entity",
   "definitions": {
@@ -8,26 +8,26 @@
       "type": "object",
       "properties": {
         "@context": {
-          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
         },
         "location": {
           "type": "array",
           "items": {
-            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/GeoProperty"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/GeoProperty"
           },
           "minItems": 1
         },
         "observationSpace": {
           "type": "array",
           "items": {
-            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/GeoProperty"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/GeoProperty"
           },
           "minItems": 1
         },
         "operationSpace": {
           "type": "array",
           "items": {
-            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/GeoProperty"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/GeoProperty"
           },
           "minItems": 1
         },
@@ -36,13 +36,13 @@
           "format": "uri"
         },
         "type": {
-          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
         },
         "createdAt": {
-          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
         },
         "modifiedAt": {
-          "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
         }
       },
       "additionalProperties": {
@@ -50,28 +50,28 @@
           {
             "type": "array",
             "items": {
-              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Property"
+              "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Property"
             },
             "minItems": 1
           },
           {
             "type": "array",
             "items": {
-              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
+              "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
             },
             "minItems": 1
           },
           {
             "type": "array",
             "items": {
-              "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/GeoProperty"
+              "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/GeoProperty"
             },
             "minItems": 1
           }
         ]
       },
       "propertyNames": {
-        "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/PropertyNames"
+        "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/PropertyNames"
       }
     },
     "EntityTemporal": {

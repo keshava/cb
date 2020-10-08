@@ -16,34 +16,34 @@
         "tags": ["Context Sources"],
         "parameters": [
           {
-            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/id"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/id"
           },
           {
-            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/idPattern"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/idPattern"
           },
           {
-            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/type"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/type"
           },
           {
-            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/attrs"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/attrs"
           },
           {
-            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/q"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/q"
           },
           {
-            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/georel"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/georel"
           },
           {
-            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/geometry"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/geometry"
           },
           {
-            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/coordinates"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/coordinates"
           },
           {
-            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/geoproperty"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/geoproperty"
           },
           {
-            "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/limit"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/limit"
           }
         ],
         "responses": {
@@ -52,11 +52,11 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/registrations/ContextSourceRegistrationList.json#/definitions/ContextSourceRegistrationList"
+                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/registrations/ContextSourceRegistrationList.json#/definitions/ContextSourceRegistrationList"
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/examples/ContextSourceRegistrationList-example.json"
+                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/ContextSourceRegistrationList-example.json"
                   }
                 }
               }
@@ -67,7 +67,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -83,7 +83,7 @@
           "content": {
             "application/json;application/ld+json": {
               "schema": {
-                "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/registrations/ContextSourceRegistration.json#/definitions/ContextSourceRegistration"
+                "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/registrations/ContextSourceRegistration.json#/definitions/ContextSourceRegistration"
               }
             }
           }
@@ -97,7 +97,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -107,7 +107,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }

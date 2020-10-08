@@ -1,13 +1,13 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/EntityList.json",
+  "$id": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/EntityList.json",
   "title": "NGSI-LD EntityList",
   "description": "NGSI-LD EntityList",
   "definitions": {
     "EntityList": {
       "type": "array",
       "items": {
-        "$ref": "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Entity"
+        "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Entity"
       }
     }
   },

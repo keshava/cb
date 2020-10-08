@@ -1,30 +1,29 @@
 #!/bin/bash
 
-ajv compile -s $SCHEMAS/Entity.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json
+ajv compile -s ./schema/Entity.json -r ./schema/common.json -r ./schema/geometry-schema.json
 
-ajv compile -s $SCHEMAS/subscriptions/Subscription.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json
+ajv compile -s ./schema/subscriptions/Subscription.json -r ./schema/common.json -r ./schema/geometry-schema.json
 
-ajv compile -s $SCHEMAS/temporal/EntityTemporal.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json -r $SCHEMAS/Entity.json
+ajv compile -s ./schema/temporal/EntityTemporal.json -r ./schema/common.json -r ./schema/geometry-schema.json -r ./schema/Entity.json
 
-ajv compile -s $SCHEMAS/registrations/ContextSourceRegistration.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json
+ajv compile -s ./schema/registrations/ContextSourceRegistration.json -r ./schema/common.json -r ./schema/geometry-schema.json
 
-ajv compile -s $SCHEMAS/subscriptions/Notification.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json -r $SCHEMAS/Entity.json
+ajv compile -s ./schema/subscriptions/Notification.json -r ./schema/common.json -r ./schema/geometry-schema.json -r ./schema/Entity.json
 
-ajv compile -s $SCHEMAS/registrations/ContextSourceNotification.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json -r $SCHEMAS/registrations/ContextSourceRegistration.json
+ajv compile -s ./schema/registrations/ContextSourceNotification.json -r ./schema/common.json -r ./schema/geometry-schema.json -r ./schema/registrations/ContextSourceRegistration.json
 
-ajv compile -s $SCHEMAS/EntityList.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json -r $SCHEMAS/Entity.json
+ajv compile -s ./schema/EntityList.json -r ./schema/common.json -r ./schema/geometry-schema.json -r ./schema/Entity.json
 
-ajv compile -s $SCHEMAS/subscriptions/SubscriptionList.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json -r $SCHEMAS/subscriptions/Subscription.json
+ajv compile -s ./schema/subscriptions/SubscriptionList.json -r ./schema/common.json -r ./schema/geometry-schema.json -r ./schema/subscriptions/Subscription.json
 
-ajv compile -s $SCHEMAS/registrations/ContextSourceRegistrationList.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json -r $SCHEMAS/registrations/ContextSourceRegistration.json
+ajv compile -s ./schema/registrations/ContextSourceRegistrationList.json -r ./schema/common.json -r ./schema/geometry-schema.json -r ./schema/registrations/ContextSourceRegistration.json
 
-ajv compile -s $SCHEMAS/temporal/EntityTemporalList.json  -r $SCHEMAS/temporal/EntityTemporal.json -r $SCHEMAS/Entity.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json
+ajv compile -s ./schema/temporal/EntityTemporalList.json -r ./schema/temporal/EntityTemporal.json -r ./schema/Entity.json -r ./schema/common.json -r ./schema/geometry-schema.json
 
-ajv compile -s $SCHEMAS/BatchOperationResult.json -r $SCHEMAS/common.json
+ajv compile -s ./schema/BatchOperationResult.json -r ./schema/common.json
 
-ajv compile -s $SCHEMAS/UpdateResult.json
+ajv compile -s ./schema/UpdateResult.json
 
-ajv compile -s $SCHEMAS/Entity_keyValues.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json 
+ajv compile -s ./schema/Entity_keyValues.json -r ./schema/common.json -r ./schema/geometry-schema.json 
 
-ajv compile -s $SCHEMAS/temporal/Entity_temporalValues.json -r $SCHEMAS/common.json -r $SCHEMAS/geometry-schema.json -r $SCHEMAS/Entity.json
-
+ajv compile -s ./schema/temporal/Entity_temporalValues.json -r ./schema/common.json -r ./schema/geometry-schema.json -r ./schema/Entity.json
