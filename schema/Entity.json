@@ -109,7 +109,7 @@
           "const": "GeoProperty"
         },
         "value": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#"
         },
         "observedAt": {
           "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/observedAt"
@@ -142,7 +142,7 @@
         ]
       }
     },
-    "Entity": {
+    "EntityFragment": {
       "type": "object",
       "properties": {
         "@context": {
@@ -171,10 +171,6 @@
           "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
         }
       },
-      "required": [
-        "id",
-        "type"
-      ],
       "additionalProperties": {
         "anyOf": [
           {
@@ -191,6 +187,19 @@
       "propertyNames": {
         "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/PropertyNames"
       }
+    },
+    "Entity": {
+      "allOf": [
+        {
+          "required": [
+            "id",
+            "type"
+          ]
+        },
+        {
+          "$ref": "#/definitions/EntityFragment"
+        }
+      ]
     }
   },
   "allOf": [
