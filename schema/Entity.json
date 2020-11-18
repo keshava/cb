@@ -28,6 +28,9 @@
             "object"
           ]
         },
+        "unitCode": {
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/unitCode"
+        },
         "observedAt": {
           "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/observedAt"
         },
