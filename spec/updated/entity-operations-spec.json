@@ -6,7 +6,7 @@
   },
   "components": {},
   "paths": {
-    "/entityOperations/create": {
+    "/entityOperations/create/": {
       "post": {
         "description": "Batch Entity creation",
         "operationId": "batchEntityCreation",
@@ -45,7 +45,7 @@
         }
       }
     },
-    "/entityOperations/update": {
+    "/entityOperations/update/": {
       "post": {
         "description": "Batch Entity update",
         "operationId": "batchEntityUpdate",
@@ -97,7 +97,7 @@
         }
       }
     },
-    "/entityOperations/upsert": {
+    "/entityOperations/upsert/": {
       "post": {
         "description": "Batch Entity upsert",
         "operationId": "batchEntityUpsert",
@@ -150,7 +150,7 @@
         }
       }
     },
-    "/entityOperations/delete": {
+    "/entityOperations/delete/": {
       "post": {
         "description": "Batch Entity delete",
         "operationId": "batchEntityDelete",
