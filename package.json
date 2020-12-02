@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./scripts/validate_all.sh",
+    "test-develop": "./scripts/validate_all_develop.sh",
     "validate-examples": "./scripts/validate_examples.sh",
     "validate-locally": "./scripts/validate_locally.sh",
     "validate-online": "./scripts/validate_online.sh",
