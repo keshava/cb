@@ -52,8 +52,8 @@
       "@id": "ngsi-ld:attributes",
       "@type": "@vocab"
     },
-    "average": {
-      "@id": "ngsi-ld:average",
+    "avg": {
+      "@id": "ngsi-ld:avg",
       "@container": "@list"
     },
     "bbox": {
@@ -63,10 +63,6 @@
     "coordinates": {
       "@container": "@list",
       "@id": "geojson:coordinates"
-    },
-    "count": {
-      "@id": "ngsi-ld:count",
-      "@container": "@list"
     },
     "createdAt": {
       "@id": "ngsi-ld:createdAt",
@@ -80,6 +76,10 @@
     },
     "description": "http://purl.org/dc/terms/description",
     "detail": "ngsi-ld:detail",
+    "distinctCount": {
+      "@id": "ngsi-ld:distinctCount",
+      "@container": "@list"
+    },
     "endAt": {
       "@id": "ngsi-ld:endAt",
       "@type": "DateTime"
@@ -133,10 +133,6 @@
     "managementInterval": "ngsi-ld:managementInterval",
     "max": {
       "@id": "ngsi-ld:max",
-      "@container": "@list"
-    },
-    "mean": {
-      "@id": "ngsi-ld:mean",
       "@container": "@list"
     },
     "min": {
@@ -204,6 +200,10 @@
     },
     "sumsq": {
       "@id": "ngsi-ld:sumsq",
+      "@container": "@list"
+    },
+    "totalCount": {
+      "@id": "ngsi-ld:totalCount",
       "@container": "@list"
     },
     "temporalQ": "ngsi-ld:temporalQ",
