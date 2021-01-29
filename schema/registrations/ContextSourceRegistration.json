@@ -73,13 +73,13 @@
           "$ref": "#/definitions/TimeInterval"
         },
         "location": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/fix-spec/schema/geometry-schema.json#"
         },
 		"observationSpace": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/fix-spec/schema/geometry-schema.json#"
         },
 		"operationSpace": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/fix-spec/schema/geometry-schema.json#"
         },
         "expires": {
           "type": "string",
