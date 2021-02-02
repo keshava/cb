@@ -6,11 +6,6 @@
   "definitions": {
     "RegistrationInfo": {
       "type": "object",
-	  "anyOf": [
-		{"required": ["entities"]},
-		{"required": ["properties"]},
-		{"required": ["relationships"]}
-      ],
       "properties": {
         "entities": {
           "type": "array",
@@ -73,13 +68,13 @@
           "$ref": "#/definitions/TimeInterval"
         },
         "location": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/fix-spec/schema/geometry-schema.json#"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Geometry.json#/definitions/Geometry"
         },
 		"observationSpace": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/fix-spec/schema/geometry-schema.json#"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Geometry.json#/definitions/Geometry"
         },
 		"operationSpace": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/fix-spec/schema/geometry-schema.json#"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Geometry.json#/definitions/Geometry"
         },
         "expires": {
           "type": "string",
@@ -98,15 +93,7 @@
           "format": "uri"
         }
       },
-      "additionalProperties": {
-        "type": [
-          "string",
-          "number",
-          "boolean",
-          "array",
-          "object"
-        ]
-      }
+      "additionalProperties": true
     },
     "ContextSourceRegistration": {
       "allOf": [
@@ -122,7 +109,7 @@
             },
             "type": {
               "type": "string",
-              "const": "ContextSourceRegistration"
+              "enum": ["ContextSourceRegistration"]
             },
             "createdAt": {
               "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"

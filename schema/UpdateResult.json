@@ -1,17 +1,18 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/UpdateResult.json",
   "title": "NGSI-LD Update Result",
   "description": "NGSI-LD Update Result",
   "definitions": {
     "NotUpdatedDetails": {
-      "attributeName": {
-        "type": "string",
-        "pattern": ""
-      },
-      "reason": {
-        "type": "string",
-        "minLenght": 1
+      "type": "object",
+      "properties": {
+        "attributeName": {
+          "type": "string",
+          "pattern": ""
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
       }
     },
     "UpdateResult": {

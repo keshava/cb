@@ -83,7 +83,7 @@
           "content": {
             "application/json;application/ld+json": {
               "schema": {
-                "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/fix-spec/schema/registrations/ContextSourceRegistration.json#/definitions/ContextSourceRegistration"
+                "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/registrations/ContextSourceRegistration.json#/definitions/ContextSourceRegistration"
               }
             }
           }

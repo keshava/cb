@@ -1,6 +1,4 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/subscriptions/Subscription.json",
   "title": "NGSI-LD Subscription",
   "description": "NGSI-LD Subscription",
   "definitions": {
@@ -138,7 +136,7 @@
             },
             "type": {
               "type": "string",
-              "const": "Subscription"
+              "enum": ["Subscription"]
             },
             "notification": {
               "$ref": "#/definitions/NotificationParams"

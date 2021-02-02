@@ -22,7 +22,7 @@
     "/csourceSubscriptions/{subscriptionId}": {
       "get": {
          "description": "Retrieves a specific Subscription from an NGSI-LD system",
-         "operationId": "retrieveSubscription",
+         "operationId": "retrieveCSourceSubscriptionsById",
          "tags": ["Context Sources"],
         "parameters": [
           {

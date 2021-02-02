@@ -1,16 +1,17 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/BatchOperationResult.json",
   "title": "NGSI-LD Batch Operation Result",
   "description": "NGSI-LD Batch Operation Result",
   "definitions": {
     "BatchEntityError": {
-      "entityId": {
-        "type": "string",
-        "format": "uri"
-      },
-      "error": {
-        "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+      "type": "object",
+      "properties": {
+        "entityId": {
+          "type": "string",
+          "format": "uri"
+        },
+        "error": {
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+        }
       }
     },
     "BatchOperationResult": {

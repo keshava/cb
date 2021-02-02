@@ -1,6 +1,4 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json",
   "title": "NGSI-LD Entity",
   "description": "NGSI-LD Entity",
   "definitions": {
@@ -17,10 +15,10 @@
       "properties": {
         "type": {
           "type": "string",
-          "const": "Property"
+          "enum": ["Property"]
         },
         "value": {
-          "type": [
+          "oneOf": [
             "string",
             "number",
             "boolean",
@@ -49,7 +47,7 @@
         "value"
       ],
       "additionalProperties": {
-        "anyOf": [
+        "oneOf": [
           {
             "$ref": "#/definitions/Property"
           },
@@ -64,7 +62,7 @@
       "properties": {
         "type": {
           "type": "string",
-          "const": "Relationship"
+          "enum": ["Relationship"]
         },
         "object": {
           "type": "string",
@@ -91,7 +89,7 @@
         "object"
       ],
       "additionalProperties": {
-        "anyOf": [
+        "oneOf": [
           {
             "$ref": "#/definitions/Property"
           },
@@ -106,10 +104,10 @@
       "properties": {
         "type": {
           "type": "string",
-          "const": "GeoProperty"
+          "enum":  ["GeoProperty"]
         },
         "value": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/geometry-schema.json#"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Geometry.json#/definitions/Geometry"
         },
         "observedAt": {
           "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/observedAt"
@@ -132,7 +130,7 @@
         "value"
       ],
       "additionalProperties": {
-        "anyOf": [
+        "oneOf": [
           {
             "$ref": "#/definitions/Property"
           },
@@ -172,7 +170,7 @@
         }
       },
       "additionalProperties": {
-        "anyOf": [
+        "oneOf": [
           {
             "$ref": "#/definitions/Property"
           },
@@ -183,9 +181,6 @@
             "$ref": "#/definitions/GeoProperty"
           }
         ]
-      },
-      "propertyNames": {
-        "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/PropertyNames"
       }
     },
     "Entity": {

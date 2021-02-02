@@ -22,7 +22,7 @@
     "/subscriptions/{subscriptionId}": {
       "get": {
          "description": "Retrieves a specific Subscription from an NGSI-LD system",
-         "operationId": "retrieveSubscription",
+         "operationId": "retrieveSubscriptionById",
          "tags": ["Context Subscription"],
         "parameters": [
           {

@@ -1,6 +1,4 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/temporal/Entity_temporalValues.json",
   "title": "NGSI-LD Entity Temporal Values",
   "description": "NGSI-LD Simplified Temporal Representation of Entities",
   "definitions": {
@@ -105,7 +103,7 @@
     "id"
   ],
   "additionalProperties": {
-    "anyOf": [
+    "oneOf": [
       {
         "$ref": "#/definitions/PropertyTemporalValues"
       },
@@ -113,8 +111,5 @@
         "$ref": "#/definitions/RelationshipTemporalValues"
       }
     ]
-  },
-  "propertyNames": {
-    "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/PropertyNames"
   }
 }
