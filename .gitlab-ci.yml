@@ -1,16 +1,10 @@
 # This file is a template, and might need editing before it works on your project.
 # Official framework image. Look for the different tagged releases at:
 # https://hub.docker.com/r/library/node/tags/
-image: node::13.7-alpine
-
-# This folder is cached between builds
-# http://docs.rep.com/ce/ci/yaml/README.html#cache
-cache:
-  paths:
-  - node_modules/
+image: docker:19.03.12
 
 before_script:
-  - yarn
+  - docker info
 
 stages:
   - test
@@ -18,7 +12,10 @@ stages:
 test:
   stage: test
   script:
-   - echo "Running tests..."   
-   - yarn test
+   - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master http://localhost:8090
+   - docker run --name spec-server --rm -d -v ${PWD}/:/ngsi  -e FOLDER=/ngsi  -p 8090:8080 halverneus/static-file-server
+   - docker run --network host -it -v ${PWD}/:/data broothie/redoc-cli bundle spec/updated/ngsi-ld-spec-open-api.json -o spec/updated/full_api.json
+   - docker run --network host --rm -v ${PWD}/:/local openapitools/openapi-generator-cli validate -i /local/spec/updated/full_api.json
+   - scripts/setBasePath.sh http://localhost:8090 https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master
   allow_failure: true
 
