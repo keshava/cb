@@ -5,7 +5,7 @@
     "EntityList": {
       "type": "array",
       "items": {
-        "$ref": "http://localhost:8090/schema/Entity.json#/definitions/Entity"
+        "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Entity"
       }
     }
   },

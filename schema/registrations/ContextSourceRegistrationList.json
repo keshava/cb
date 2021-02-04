@@ -1,13 +1,13 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://localhost:8090/schema/registrations/ContextSourceRegistrationList.json",
+  "$id": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/registrations/ContextSourceRegistrationList.json",
   "title": "NGSI-LD Registration List",
   "description": "NGSI-LD Registration List",
   "definitions": {
     "ContextSourceRegistrationList": {
       "type": "array",
       "items": {
-        "$ref": "http://localhost:8090/schema/registrations/ContextSourceRegistration.json#/definitions/ContextSourceRegistration"
+        "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/registrations/ContextSourceRegistration.json#/definitions/ContextSourceRegistration"
       }
     }
   },

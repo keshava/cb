@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://localhost:8090/schema/registrations/ContextSourceRegistration.json",
+  "$id": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/registrations/ContextSourceRegistration.json",
   "title": "NGSI-LD Context Source Registration",
   "description": "NGSI-LD Context Source Registration",
   "definitions": {
@@ -11,14 +11,14 @@
           "type": "array",
           "minItems": 1,
           "items": {
-            "$ref": "http://localhost:8090/schema/common.json#/definitions/EntityInfo"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/EntityInfo"
           }
         },
         "properties": {
           "type": "array",
           "minItems": 1,
           "items": {
-            "$ref": "http://localhost:8090/schema/common.json#/definitions/Name"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
           },
           "uniqueItems": true
         },
@@ -26,7 +26,7 @@
           "type": "array",
           "minItems": 1,
           "items": {
-            "$ref": "http://localhost:8090/schema/common.json#/definitions/Name"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
           },
           "uniqueItems": true
         }
@@ -52,7 +52,7 @@
       "type": "object",
       "properties": {
         "@context": {
-          "$ref": "http://localhost:8090/schema/common.json#/definitions/LdContext"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
         },
         "information": {
           "type": "array",
@@ -68,13 +68,13 @@
           "$ref": "#/definitions/TimeInterval"
         },
         "location": {
-          "$ref": "http://localhost:8090/schema/Geometry.json#/definitions/Geometry"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Geometry.json#/definitions/Geometry"
         },
 		"observationSpace": {
-          "$ref": "http://localhost:8090/schema/Geometry.json#/definitions/Geometry"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Geometry.json#/definitions/Geometry"
         },
 		"operationSpace": {
-          "$ref": "http://localhost:8090/schema/Geometry.json#/definitions/Geometry"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Geometry.json#/definitions/Geometry"
         },
         "expires": {
           "type": "string",
@@ -112,10 +112,10 @@
               "enum": ["ContextSourceRegistration"]
             },
             "createdAt": {
-              "$ref": "http://localhost:8090/schema/common.json#/definitions/createdAt"
+              "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
             },
             "modifiedAt": {
-              "$ref": "http://localhost:8090/schema/common.json#/definitions/modifiedAt"
+              "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
             }
           },
           "required": [

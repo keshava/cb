@@ -12,7 +12,7 @@
         "in": "query",
         "required": false,
         "schema": {
-          "$ref": "http://localhost:8090/schema/common.json#/definitions/timerel"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/timerel"
         }
       },
       "time": {
@@ -41,7 +41,7 @@
         "in": "query",
         "required": false,
         "schema": {
-          "$ref": "http://localhost:8090/schema/common.json#/definitions/Name"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
         }
       },
       "lastN": {
@@ -77,31 +77,31 @@
         "tags": ["Temporal Evolution", "Temporal"],
         "parameters": [
           {
-            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/id"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/id"
           },
           {
-            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/idPattern"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/idPattern"
           },
           {
-            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/type"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/type"
           },
           {
-            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/attrs"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/attrs"
           },
           {
-            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/q"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/q"
           },
           {
-            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/georel"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/georel"
           },
           {
-            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/geometry"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/geometry"
           },
           {
-            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/coordinates"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/coordinates"
           },
           {
-            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/geoproperty"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/geoproperty"
           },
           {
             "$ref": "#/components/parameters/timerel"
@@ -116,10 +116,10 @@
             "$ref": "#/components/parameters/endTime"
           },
           {
-            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/csf"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/csf"
           },
           {
-            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/limit"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/limit"
           },
           {
             "$ref": "#/components/parameters/options"
@@ -134,11 +134,11 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "http://localhost:8090/schema/temporal/EntityTemporalList.json#/definitions/EntityTemporalList"
+                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/temporal/EntityTemporalList.json#/definitions/EntityTemporalList"
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "http://localhost:8090/examples/EntityTemporalList-example.json"
+                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/EntityTemporalList-example.json"
                   }
                 }
               }
@@ -149,7 +149,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -165,11 +165,11 @@
           "content": {
             "application/json;application/ld+json": {
               "schema": {
-                "$ref": "http://localhost:8090/schema/temporal/EntityTemporal.json#/definitions/EntityTemporal"
+                "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/temporal/EntityTemporal.json#/definitions/EntityTemporal"
               },
               "examples": {
                 "simple": {
-                  "externalValue": "http://localhost:8090/examples/EntityTemporal-example_C5.5.3.json"
+                  "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/EntityTemporal-example_C5.5.3.json"
                 }
               }
             }
@@ -187,7 +187,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -197,7 +197,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -207,7 +207,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }

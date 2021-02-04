@@ -103,7 +103,7 @@
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "http://localhost:8090/examples/EntityList-example.json"
+                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/EntityList-example.json"
                   }
                 }
               }
@@ -207,7 +207,7 @@
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "http://localhost:8090/examples/Entity-example.json"
+                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/Entity-example.json"
                   }
                 }
               }
@@ -515,7 +515,7 @@
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "http://localhost:8090/examples/SubscriptionList-example.json"
+                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/SubscriptionList-example.json"
                   }
                 }
               }
@@ -600,7 +600,7 @@
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "http://localhost:8090/examples/Subscription-example_C.4.json"
+                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/Subscription-example_C.4.json"
                   }
                 }
               }
@@ -765,7 +765,7 @@
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "http://localhost:8090/examples/ContextSourceRegistrationList-example.json"
+                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/ContextSourceRegistrationList-example.json"
                   }
                 }
               }
@@ -850,7 +850,7 @@
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "http://localhost:8090/examples/"
+                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/"
                   }
                 }
               }
@@ -940,7 +940,7 @@
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "http://localhost:8090/examples/SubscriptionList-example.json"
+                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/SubscriptionList-example.json"
                   }
                 }
               }
@@ -1025,7 +1025,7 @@
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "http://localhost:8090/examples/Subscription-example_C.4.json"
+                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/Subscription-example_C.4.json"
                   }
                 }
               }
@@ -1411,7 +1411,7 @@
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "http://localhost:8090/examples/EntityTemporalList-example.json"
+                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/EntityTemporalList-example.json"
                   }
                 }
               }
@@ -1445,7 +1445,7 @@
               },
               "examples": {
                 "simple": {
-                  "externalValue": "http://localhost:8090/examples/EntityTemporal-example_C5.5.3.json"
+                  "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/EntityTemporal-example_C5.5.3.json"
                 }
               }
             }
@@ -1538,7 +1538,7 @@
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "http://localhost:8090/examples/EntityTemporal-example_C5.5.3.json"
+                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/EntityTemporal-example_C5.5.3.json"
                   }
                 }
               }

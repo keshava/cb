@@ -18,7 +18,7 @@
       "format": "uri"
     },
     "@context": {
-      "$ref": "http://localhost:8090/schema/common.json#/definitions/LdContext"
+      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
     },
     "notifiedAt": {
       "type": "string",
@@ -27,7 +27,7 @@
     "data": {
       "type": "array",
       "items": {
-        "$ref": "http://localhost:8090/schema/Entity.json#/definitions/Entity"
+        "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Entity"
       },
       "minItems": 1
     }

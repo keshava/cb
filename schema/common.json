@@ -128,16 +128,16 @@
     "coordinates": {
       "oneOf": [
         {
-          "$ref": "http://localhost:8090/schema/Geometry.json#/definitions/position"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Geometry.json#/definitions/position"
         },
         {
-          "$ref": "http://localhost:8090/schema/Geometry.json#/definitions/positionArray"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Geometry.json#/definitions/positionArray"
         },
         {
-          "$ref": "http://localhost:8090/schema/Geometry.json#/definitions/lineString"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Geometry.json#/definitions/lineString"
         },
         {
-          "$ref": "http://localhost:8090/schema/Geometry.json#/definitions/polygon"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Geometry.json#/definitions/polygon"
         }
       ]
     },

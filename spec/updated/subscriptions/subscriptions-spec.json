@@ -38,11 +38,11 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "http://localhost:8090/schema/subscriptions/SubscriptionList.json#/definitions/SubscriptionList"
+                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/subscriptions/SubscriptionList.json#/definitions/SubscriptionList"
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "http://localhost:8090/examples/SubscriptionList-example.json"
+                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/SubscriptionList-example.json"
                   }
                 }
               }
@@ -53,7 +53,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -72,7 +72,7 @@
           "content": {
             "application/json;application/ld+json": {
               "schema": {
-                "$ref": "http://localhost:8090/schema/subscriptions/Subscription.json#/definitions/Subscription"
+                "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/subscriptions/Subscription.json#/definitions/Subscription"
               }
             }
           }
@@ -86,7 +86,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -96,7 +96,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
