@@ -5,7 +5,7 @@
     "EntityTemporalList": {
       "type": "array",
       "items": {
-        "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/temporal/EntityTemporal.json#/definitions/EntityTemporal"
+        "$ref": "http://localhost:8090/schema/temporal/EntityTemporal.json#/definitions/EntityTemporal"
       }
     }
   },

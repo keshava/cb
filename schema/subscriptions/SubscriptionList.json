@@ -5,7 +5,7 @@
     "SubscriptionList": {
       "type": "array",
       "items": {
-        "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/subscriptions/Subscription.json#/definitions/Subscription"
+        "$ref": "http://localhost:8090/schema/subscriptions/Subscription.json#/definitions/Subscription"
       }
     }
   },

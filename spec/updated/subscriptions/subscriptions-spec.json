@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "NGSI-LD Context Source Subscriptions",
+    "title": "NGSI-LD Subscriptions",
     "version": "latest"
   },
   "components": {
@@ -19,11 +19,14 @@
     }
   },
   "paths": {
-    "/csourceSubscriptions/": {
+    "/subscriptions/": {
       "get": {
-        "description": "Retrieves the context source discovery subscriptions available in an NGSI-LD system",
-        "operationId": "retrieveCSourceSubscriptions",
-        "tags": ["Context Sources"],
+        "description": "Retrieves the subscriptions available in an NGSI-LD system",
+        "operationId": "retrieveSubscriptions",
+        "tags": [
+          "Context Subscription",
+          "Subscriptions"
+        ],
         "parameters": [
           {
             "$ref": "#/components/parameters/limit"
@@ -35,11 +38,11 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/subscriptions/SubscriptionList.json#/definitions/SubscriptionList"
+                  "$ref": "http://localhost:8090/schema/subscriptions/SubscriptionList.json#/definitions/SubscriptionList"
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/SubscriptionList-example.json"
+                    "externalValue": "http://localhost:8090/examples/SubscriptionList-example.json"
                   }
                 }
               }
@@ -50,7 +53,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -58,15 +61,18 @@
         }
       },
       "post": {
-        "description": "Creates a context source discovery Subscription within an NGSI-LD system",
-        "operationId": "createCSourceSubscription",
-        "tags": ["Context Sources"],
+        "description": "Creates a new Subscription within an NGSI-LD system",
+        "operationId": "createSubscription",
+        "tags": [
+          "Context Subscription",
+          "Subscriptions"
+        ],
         "requestBody": {
           "required": true,
           "content": {
             "application/json;application/ld+json": {
               "schema": {
-                "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/subscriptions/Subscription.json#/definitions/Subscription"
+                "$ref": "http://localhost:8090/schema/subscriptions/Subscription.json#/definitions/Subscription"
               }
             }
           }
@@ -80,7 +86,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -90,7 +96,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }

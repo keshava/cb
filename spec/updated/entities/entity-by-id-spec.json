@@ -22,7 +22,7 @@
         "in": "query",
         "required": false,
         "schema": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/Name"
         }
       },
       "attrs": {
@@ -42,7 +42,7 @@
       "get": {
         "description": "Retrieve an specific Entity from an NGSI-LD system. It's possible to specify the Entity attributes to be retrieved by using query parameters",
         "operationId": "retrieveEntityById",
-        "tags": ["Context Information"],
+        "tags": ["Context Information", "Entities"],
         "parameters": [
           {
             "$ref": "#/components/parameters/entityId"
@@ -54,7 +54,7 @@
             "$ref": "#/components/parameters/type"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/options"
+            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/options"
           }
         ],
         "responses": {
@@ -63,11 +63,11 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Entity"
+                  "$ref": "http://localhost:8090/schema/Entity.json#/definitions/Entity"
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/Entity-example.json"
+                    "externalValue": "http://localhost:8090/examples/Entity-example.json"
                   }
                 }
               }
@@ -78,7 +78,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -88,7 +88,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -98,7 +98,7 @@
       "delete": {
         "description": "Removes an specific Entity from an NGSI-LD system",
         "operationId": "removeEntityById",
-        "tags": ["Context Information"],
+        "tags": ["Context Information", "Entities"],
         "parameters": [
           {
             "$ref": "#/components/parameters/entityId"
@@ -116,7 +116,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -126,7 +126,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }

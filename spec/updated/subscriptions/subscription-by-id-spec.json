@@ -23,7 +23,7 @@
       "get": {
          "description": "Retrieves a specific Subscription from an NGSI-LD system",
          "operationId": "retrieveSubscriptionById",
-         "tags": ["Context Subscription"],
+         "tags": ["Context Subscription", "Subscriptions"],
         "parameters": [
           {
             "$ref": "#/components/parameters/subscriptionId"
@@ -35,11 +35,11 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/subscriptions/Subscription.json#/definitions/Subscription"
+                  "$ref": "http://localhost:8090/schema/subscriptions/Subscription.json#/definitions/Subscription"
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/Subscription-example_C.4.json"
+                    "externalValue": "http://localhost:8090/examples/Subscription-example_C.4.json"
                   }
                 }
               }
@@ -50,7 +50,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -60,7 +60,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -70,7 +70,7 @@
       "patch": {
         "description": "Updates a specific Subscription within an NGSI-LD system",
         "operationId": "updateSubscription",
-        "tags": ["Context Subscription"],
+        "tags": ["Context Subscription", "Subscriptions"],
         "parameters": [
           {
             "$ref": "#/components/parameters/subscriptionId"
@@ -81,7 +81,7 @@
           "content": {
             "application/json;application/ld+json": {
               "schema": {
-                "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/subscriptions/Subscription.json#/definitions/SubscriptionFragment"
+                "$ref": "http://localhost:8090/schema/subscriptions/Subscription.json#/definitions/SubscriptionFragment"
               }
             }
           }
@@ -95,7 +95,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -105,7 +105,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -115,7 +115,7 @@
       "delete": {
         "description": "Removes a specific Subscription from an NGSI-LD system",
         "operationId": "removeSubscription",
-        "tags": ["Context Subscription"],
+        "tags": ["Context Subscription", "Subscriptions"],
         "parameters": [
           {
             "$ref": "#/components/parameters/subscriptionId"
@@ -130,7 +130,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -140,7 +140,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }

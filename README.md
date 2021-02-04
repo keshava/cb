@@ -10,7 +10,7 @@ This repository contains OpenAPI descriptions for the NGSI-LD interface defined 
 
 To get an account on ETSI Forge and to learn how to contribute visit the [Forge Getting started wiki](https://forge.etsi.org/wiki/index.php/Get_started).
 
-More info @ [CONTIBUTE](./CONTRIBUTE.md)
+More info @ [CONTRIBUTE](./CONTRIBUTE.md)
 
 Change requests are managed using [Gerrit](https://forge.etsi.org/gerrit).
 
@@ -22,12 +22,13 @@ it replaces all paths to the master branch inside [spec](spec) and [schema](sche
 references are resolved with 'https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master' and therefore changes will not be present locally.
 
 With the local file-server still running, you can build the bundled api via:
+TODO:  change to openapi-cli image -> https://github.com/Redocly/openapi-cli/pull/247/files
 ```
-docker run --network host -it -v ${PWD}/:/data broothie/redoc-cli bundle spec/updated/ngsi-ld-spec-open-api.json -o spec/updated/full_api.json
+docker run --network host -it -v ${PWD}/:/data broothie/redoc-cli bundle spec/updated/ngsi-ld-spec-open-api.json -o spec/updated/generated/full_api.json
 ```
 And validate it with:
 ```
-docker run --network host --rm -v ${PWD}/:/local openapitools/openapi-generator-cli validate -i /local/spec/updated/full_api.json
+docker run --network host --rm -v ${PWD}/:/local openapitools/openapi-generator-cli validate -i /local/spec/updated/generated/full_api.json
 ```
 
 When editing is finished, hit the enter button on your local dev env and push.

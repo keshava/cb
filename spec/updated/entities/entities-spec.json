@@ -62,7 +62,7 @@
         "in": "query",
         "required": false,
         "schema": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/georel"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/georel"
         }
       },
       "geometry": {
@@ -71,7 +71,7 @@
         "in": "query",
         "required": false,
         "schema": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/geometry"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/geometry"
         }
       },
       "coordinates": {
@@ -80,7 +80,7 @@
         "in": "query",
         "required": false,
         "schema": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/coordinates"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/coordinates"
         }
       },
       "geoproperty": {
@@ -130,7 +130,7 @@
       "get": {
         "description": "Retrieve a set of entities which matches a specific query from an NGSI-LD system",
         "operationId": "queryEntities",
-        "tags": ["Context Information"],
+        "tags": ["Context Information", "Entities"],
         "parameters": [
           {
             "$ref": "#/components/parameters/id"
@@ -175,11 +175,11 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/EntityList.json#/definitions/EntityList"
+                  "$ref": "http://localhost:8090/schema/EntityList.json#/definitions/EntityList"
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/EntityList-example.json"
+                    "externalValue": "http://localhost:8090/examples/EntityList-example.json"
                   }
                 }
               }
@@ -190,7 +190,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -200,13 +200,13 @@
       "post": {
         "description": "Create a new Entity within an NGSI-LD system",
         "operationId": "createEntity",
-        "tags": ["Context Information"],
+        "tags": ["Context Information", "Entities"],
         "requestBody": {
           "required": true,
           "content": {
             "application/json;application/ld+json": {
               "schema": {
-                "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Entity"
+                "$ref": "http://localhost:8090/schema/Entity.json#/definitions/Entity"
               }
             }
           }
@@ -220,7 +220,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -230,7 +230,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -240,7 +240,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }

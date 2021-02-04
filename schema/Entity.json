@@ -27,13 +27,13 @@
           ]
         },
         "observedAt": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/observedAt"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/observedAt"
         },
         "createdAt": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/createdAt"
         },
         "modifiedAt": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/modifiedAt"
         },
         "datasetId": {
           "$ref": "#/definitions/datasetId"
@@ -69,13 +69,13 @@
           "format": "uri"
         },
         "observedAt": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/observedAt"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/observedAt"
         },
         "createdAt": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/createdAt"
         },
         "modifiedAt": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/modifiedAt"
         },
         "datasetId": {
           "$ref": "#/definitions/datasetId"
@@ -107,16 +107,16 @@
           "enum":  ["GeoProperty"]
         },
         "value": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Geometry.json#/definitions/Geometry"
+          "$ref": "http://localhost:8090/schema/Geometry.json#/definitions/Geometry"
         },
         "observedAt": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/observedAt"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/observedAt"
         },
         "createdAt": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/createdAt"
         },
         "modifiedAt": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/modifiedAt"
         },
         "datasetId": {
           "$ref": "#/definitions/datasetId"
@@ -144,7 +144,7 @@
       "type": "object",
       "properties": {
         "@context": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/LdContext"
         },
         "location": {
           "$ref": "#/definitions/GeoProperty"
@@ -160,13 +160,13 @@
           "format": "uri"
         },
         "type": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/Name"
         },
         "createdAt": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/createdAt"
         },
         "modifiedAt": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/modifiedAt"
         }
       },
       "additionalProperties": {

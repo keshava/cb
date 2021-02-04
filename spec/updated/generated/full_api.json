@@ -52,7 +52,8 @@
         "description": "Retrieve a set of entities which matches a specific query from an NGSI-LD system",
         "operationId": "queryEntities",
         "tags": [
-          "Context Information"
+          "Context Information",
+          "Entities"
         ],
         "parameters": [
           {
@@ -124,7 +125,8 @@
         "description": "Create a new Entity within an NGSI-LD system",
         "operationId": "createEntity",
         "tags": [
-          "Context Information"
+          "Context Information",
+          "Entities"
         ],
         "requestBody": {
           "required": true,
@@ -178,7 +180,8 @@
         "description": "Retrieve an specific Entity from an NGSI-LD system. It's possible to specify the Entity attributes to be retrieved by using query parameters",
         "operationId": "retrieveEntityById",
         "tags": [
-          "Context Information"
+          "Context Information",
+          "Entities"
         ],
         "parameters": [
           {
@@ -236,7 +239,8 @@
         "description": "Removes an specific Entity from an NGSI-LD system",
         "operationId": "removeEntityById",
         "tags": [
-          "Context Information"
+          "Context Information",
+          "Entities"
         ],
         "parameters": [
           {
@@ -278,7 +282,8 @@
         "description": "Append new Entity attributes to an existing Entity within an NGSI-LD system",
         "operationId": "appendEntityAttrs",
         "tags": [
-          "Context Information"
+          "Context Information",
+          "Entities"
         ],
         "parameters": [
           {
@@ -338,7 +343,8 @@
         "description": "Update existing Entity attributes within an NGSI-LD system",
         "operationId": "updateEntityAttrs",
         "tags": [
-          "Context Information"
+          "Context Information",
+          "Entities"
         ],
         "parameters": [
           {
@@ -397,7 +403,8 @@
         "description": "Update existing Entity attributes within an NGSI-LD system",
         "operationId": "partialAttrUpdate",
         "tags": [
-          "Context Information"
+          "Context Information",
+          "Entities"
         ],
         "parameters": [
           {
@@ -447,7 +454,8 @@
         "description": "Removes an existing Entity attribute within an NGSI-LD system",
         "operationId": "removeEntityAttr",
         "tags": [
-          "Context Information"
+          "Context Information",
+          "Entities"
         ],
         "parameters": [
           {
@@ -489,7 +497,8 @@
         "description": "Retrieves the subscriptions available in an NGSI-LD system",
         "operationId": "retrieveSubscriptions",
         "tags": [
-          "Context Subscription"
+          "Context Subscription",
+          "Subscriptions"
         ],
         "parameters": [
           {
@@ -528,7 +537,8 @@
         "description": "Creates a new Subscription within an NGSI-LD system",
         "operationId": "createSubscription",
         "tags": [
-          "Context Subscription"
+          "Context Subscription",
+          "Subscriptions"
         ],
         "requestBody": {
           "required": true,
@@ -572,7 +582,8 @@
         "description": "Retrieves a specific Subscription from an NGSI-LD system",
         "operationId": "retrieveSubscriptionById",
         "tags": [
-          "Context Subscription"
+          "Context Subscription",
+          "Subscriptions"
         ],
         "parameters": [
           {
@@ -621,7 +632,8 @@
         "description": "Updates a specific Subscription within an NGSI-LD system",
         "operationId": "updateSubscription",
         "tags": [
-          "Context Subscription"
+          "Context Subscription",
+          "Subscriptions"
         ],
         "parameters": [
           {
@@ -668,7 +680,8 @@
         "description": "Removes a specific Subscription from an NGSI-LD system",
         "operationId": "removeSubscription",
         "tags": [
-          "Context Subscription"
+          "Context Subscription",
+          "Subscriptions"
         ],
         "parameters": [
           {
@@ -707,7 +720,8 @@
         "description": "Retrieve a set of context sources which matches a specific query from an NGSI-LD system",
         "operationId": "queryCsources",
         "tags": [
-          "Context Sources"
+          "Context Sources",
+          "CSourceRegistrations"
         ],
         "parameters": [
           {
@@ -773,7 +787,8 @@
         "description": "Registers a new context source within an NGSI-LD system",
         "operationId": "registerCsource",
         "tags": [
-          "Context Sources"
+          "Context Sources",
+          "CSourceRegistrations"
         ],
         "requestBody": {
           "required": true,
@@ -817,7 +832,8 @@
         "description": "Retrieves a specific context source registration from an NGSI-LD system",
         "operationId": "retrieveCsource",
         "tags": [
-          "Context Sources"
+          "Context Sources",
+          "CSourceRegistrations"
         ],
         "parameters": [
           {
@@ -866,7 +882,8 @@
         "description": "Removes an specific context source registration within an NGSI-LD system",
         "operationId": "removeCsource",
         "tags": [
-          "Context Sources"
+          "Context Sources",
+          "CSourceRegistrations"
         ],
         "parameters": [
           {
@@ -905,7 +922,8 @@
         "description": "Retrieves the context source discovery subscriptions available in an NGSI-LD system",
         "operationId": "retrieveCSourceSubscriptions",
         "tags": [
-          "Context Sources"
+          "Context Sources",
+          "CSourceSubscriptions"
         ],
         "parameters": [
           {
@@ -944,7 +962,8 @@
         "description": "Creates a context source discovery Subscription within an NGSI-LD system",
         "operationId": "createCSourceSubscription",
         "tags": [
-          "Context Sources"
+          "Context Sources",
+          "CSourceSubscriptions"
         ],
         "requestBody": {
           "required": true,
@@ -988,7 +1007,8 @@
         "description": "Retrieves a specific Subscription from an NGSI-LD system",
         "operationId": "retrieveCSourceSubscriptionsById",
         "tags": [
-          "Context Sources"
+          "Context Sources",
+          "CSourceSubscriptions"
         ],
         "parameters": [
           {
@@ -1037,7 +1057,8 @@
         "description": "Updates a specific context source discovery Subscription within an NGSI-LD system",
         "operationId": "updateCSourceSubscription",
         "tags": [
-          "Context Sources"
+          "Context Sources",
+          "CSourceSubscriptions"
         ],
         "parameters": [
           {
@@ -1084,7 +1105,8 @@
         "description": "Removes a specific Context Source Subscription from an NGSI-LD system",
         "operationId": "removeCSourceSubscription",
         "tags": [
-          "Context Sources"
+          "Context Sources",
+          "CSourceSubscriptions"
         ],
         "parameters": [
           {
@@ -1123,7 +1145,8 @@
         "description": "Batch Entity creation",
         "operationId": "batchEntityCreation",
         "tags": [
-          "Batch Operations"
+          "Batch Operations",
+          "Entities"
         ],
         "requestBody": {
           "required": true,
@@ -1164,7 +1187,8 @@
         "description": "Batch Entity update",
         "operationId": "batchEntityUpdate",
         "tags": [
-          "Batch Operations"
+          "Batch Operations",
+          "Entities"
         ],
         "parameters": [
           {
@@ -1218,7 +1242,8 @@
         "description": "Batch Entity upsert",
         "operationId": "batchEntityUpsert",
         "tags": [
-          "Batch Operations"
+          "Batch Operations",
+          "Entities"
         ],
         "parameters": [
           {
@@ -1273,7 +1298,8 @@
         "description": "Batch Entity delete",
         "operationId": "batchEntityDelete",
         "tags": [
-          "Batch Operations"
+          "Batch Operations",
+          "Entities"
         ],
         "requestBody": {
           "required": true,
@@ -1319,7 +1345,8 @@
         "description": "Query temporal evolution of Entities from an NGSI-LD system",
         "operationId": "queryTemporalEntities",
         "tags": [
-          "Temporal Evolution"
+          "Temporal Evolution",
+          "Temporal"
         ],
         "parameters": [
           {
@@ -1406,7 +1433,8 @@
         "description": "Create or update temporal representation of an Entity within an NGSI-LD system",
         "operationId": "createUpdateEntityTemporal",
         "tags": [
-          "Temporal Evolution"
+          "Temporal Evolution",
+          "Temporal"
         ],
         "requestBody": {
           "required": true,
@@ -1468,7 +1496,8 @@
         "description": "Retrieve the temporal representation of an specific Entity from an NGSI-LD system. It's possible to specify the Entity attributes to be retrieved by using query parameters",
         "operationId": "retrieveEntityTemporalById",
         "tags": [
-          "Temporal Evolution"
+          "Temporal Evolution",
+          "Temporal"
         ],
         "parameters": [
           {
@@ -1541,7 +1570,8 @@
         "description": "Removes the temporal representation of an Entity from an NGSI-LD system",
         "operationId": "removeEntityTemporalById",
         "tags": [
-          "Temporal Evolution"
+          "Temporal Evolution",
+          "Temporal"
         ],
         "parameters": [
           {
@@ -1583,7 +1613,8 @@
         "description": "Add new attributes to an existing Temporal Entity within an NGSI-LD system",
         "operationId": "addTemporalEntityAttrs",
         "tags": [
-          "Temporal Evolution"
+          "Temporal Evolution",
+          "Temporal"
         ],
         "parameters": [
           {
@@ -1632,7 +1663,8 @@
         "description": "Attribute from Temporal Representation of Entity deletion",
         "operationId": "removeEntityTemporalAttr",
         "tags": [
-          "Temporal Evolution"
+          "Temporal Evolution",
+          "Temporal"
         ],
         "parameters": [
           {
@@ -1674,7 +1706,8 @@
         "description": "Allows modifying a specific Attribute (Property or Relationship) instance, identified by its instanceId, of a Temporal Representation of an Entity.",
         "operationId": "modifyEntityTemporalAttrInstance",
         "tags": [
-          "Temporal Evolution"
+          "Temporal Evolution",
+          "Temporal"
         ],
         "parameters": [
           {
@@ -1727,7 +1760,8 @@
         "description": "Attribute Instance deletion by instance id.",
         "operationId": "removeEntityTemporalAttrInstance",
         "tags": [
-          "Temporal Evolution"
+          "Temporal Evolution",
+          "Temporal"
         ],
         "parameters": [
           {

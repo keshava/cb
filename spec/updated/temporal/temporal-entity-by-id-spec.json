@@ -11,34 +11,34 @@
       "get": {
         "description": "Retrieve the temporal representation of an specific Entity from an NGSI-LD system. It's possible to specify the Entity attributes to be retrieved by using query parameters",
         "operationId": "retrieveEntityTemporalById",
-        "tags": ["Temporal Evolution"],
+        "tags": ["Temporal Evolution", "Temporal"],
         "parameters": [
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/entityId"
+            "$ref": "http://localhost:8090/spec/updated/entities/entity-by-id-spec.json#/components/parameters/entityId"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/attrs"
+            "$ref": "http://localhost:8090/spec/updated/entities/entity-by-id-spec.json#/components/parameters/attrs"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/type"
+            "$ref": "http://localhost:8090/spec/updated/entities/entity-by-id-spec.json#/components/parameters/type"
           },  
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/options"
+            "$ref": "http://localhost:8090/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/options"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/timerel"
+            "$ref": "http://localhost:8090/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/timerel"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/timeproperty"
+            "$ref": "http://localhost:8090/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/timeproperty"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/time"
+            "$ref": "http://localhost:8090/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/time"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/endTime"
+            "$ref": "http://localhost:8090/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/endTime"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/lastN"
+            "$ref": "http://localhost:8090/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/lastN"
           }
         ],
         "responses": {
@@ -47,11 +47,11 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/temporal/EntityTemporal.json#/definitions/EntityTemporal"
+                  "$ref": "http://localhost:8090/schema/temporal/EntityTemporal.json#/definitions/EntityTemporal"
                 },
                 "examples": {
                   "simple": {
-                    "externalValue": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/examples/EntityTemporal-example_C5.5.3.json"
+                    "externalValue": "http://localhost:8090/examples/EntityTemporal-example_C5.5.3.json"
                   }
                 }
               }
@@ -62,7 +62,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -72,7 +72,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -82,13 +82,13 @@
       "delete": {
         "description": "Removes the temporal representation of an Entity from an NGSI-LD system",
         "operationId": "removeEntityTemporalById",
-        "tags": ["Temporal Evolution"],
+        "tags": ["Temporal Evolution", "Temporal"],
         "parameters": [
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/entityId"
+            "$ref": "http://localhost:8090/spec/updated/entities/entity-by-id-spec.json#/components/parameters/entityId"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/type"
+            "$ref": "http://localhost:8090/spec/updated/entities/entity-by-id-spec.json#/components/parameters/type"
           }
         ],
         "responses": {
@@ -100,7 +100,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -110,7 +110,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }

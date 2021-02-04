@@ -10,7 +10,7 @@
           "format": "uri"
         },
         "error": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+          "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
         }
       }
     },

@@ -10,13 +10,13 @@
       "post": {
         "description": "Batch Entity creation",
         "operationId": "batchEntityCreation",
-        "tags": ["Batch Operations"],
+        "tags": ["Batch Operations", "Entities"],
         "requestBody": {
           "required": true,
           "content": {
             "application/json;application/ld+json": {
               "schema": {
-                "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/EntityList.json#/definitions/EntityList"
+                "$ref": "http://localhost:8090/schema/EntityList.json#/definitions/EntityList"
               }
             }
           }
@@ -27,7 +27,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/BatchOperationResult.json#/definitions/BatchOperationResult"
+                  "$ref": "http://localhost:8090/schema/BatchOperationResult.json#/definitions/BatchOperationResult"
                 }
               }
             }
@@ -37,7 +37,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -49,7 +49,7 @@
       "post": {
         "description": "Batch Entity update",
         "operationId": "batchEntityUpdate",
-        "tags": ["Batch Operations"],
+        "tags": ["Batch Operations", "Entities"],
         "parameters": [
           {
             "name": "options",
@@ -68,7 +68,7 @@
           "content": {
             "application/json;application/ld+json": {
               "schema": {
-                "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/EntityList.json#/definitions/EntityList"
+                "$ref": "http://localhost:8090/schema/EntityList.json#/definitions/EntityList"
               }
             }
           }
@@ -79,7 +79,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/BatchOperationResult.json#/definitions/BatchOperationResult"
+                  "$ref": "http://localhost:8090/schema/BatchOperationResult.json#/definitions/BatchOperationResult"
                 }
               }
             }
@@ -89,7 +89,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -101,7 +101,7 @@
       "post": {
         "description": "Batch Entity upsert",
         "operationId": "batchEntityUpsert",
-        "tags": ["Batch Operations"],
+        "tags": ["Batch Operations", "Entities"],
         "parameters": [
           {
             "name": "options",
@@ -121,7 +121,7 @@
           "content": {
             "application/json;application/ld+json": {
               "schema": {
-                "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/EntityList.json#/definitions/EntityList"
+                "$ref": "http://localhost:8090/schema/EntityList.json#/definitions/EntityList"
               }
             }
           }
@@ -132,7 +132,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/BatchOperationResult.json#/definitions/BatchOperationResult"
+                  "$ref": "http://localhost:8090/schema/BatchOperationResult.json#/definitions/BatchOperationResult"
                 }
               }
             }
@@ -142,7 +142,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }
@@ -154,7 +154,7 @@
       "post": {
         "description": "Batch Entity delete",
         "operationId": "batchEntityDelete",
-        "tags": ["Batch Operations"],
+        "tags": ["Batch Operations", "Entities"],
         "requestBody": {
           "required": true,
           "content": {
@@ -176,7 +176,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/BatchOperationResult.json#/definitions/BatchOperationResult"
+                  "$ref": "http://localhost:8090/schema/BatchOperationResult.json#/definitions/BatchOperationResult"
                 }
               }
             }
@@ -186,7 +186,7 @@
             "content": {
               "application/json;application/ld+json": {
                 "schema": {
-                  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/ProblemDetails"
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
                 }
               }
             }

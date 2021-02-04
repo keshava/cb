@@ -1,0 +1,119 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "NGSI-LD Registrations",
+    "version": "latest"
+  },
+  "components": {
+    "parameters": {
+    }
+  },
+  "paths": {
+    "/csourceRegistrations/": {
+      "get": {
+        "description": "Retrieve a set of context sources which matches a specific query from an NGSI-LD system",
+        "operationId": "queryCsources",
+        "tags": ["Context Sources", "CSourceRegistrations"],
+        "parameters": [
+          {
+            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/id"
+          },
+          {
+            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/idPattern"
+          },
+          {
+            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/type"
+          },
+          {
+            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/attrs"
+          },
+          {
+            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/q"
+          },
+          {
+            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/georel"
+          },
+          {
+            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/geometry"
+          },
+          {
+            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/coordinates"
+          },
+          {
+            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/geoproperty"
+          },
+          {
+            "$ref": "http://localhost:8090/spec/updated/entities/entities-spec.json#/components/parameters/limit"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "http://localhost:8090/schema/registrations/ContextSourceRegistrationList.json#/definitions/ContextSourceRegistrationList"
+                },
+                "examples": {
+                  "simple": {
+                    "externalValue": "http://localhost:8090/examples/ContextSourceRegistrationList-example.json"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Registers a new context source within an NGSI-LD system",
+        "operationId": "registerCsource",
+        "tags": ["Context Sources", "CSourceRegistrations"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json;application/ld+json": {
+              "schema": {
+                "$ref": "http://localhost:8090/schema/registrations/ContextSourceRegistration.json#/definitions/ContextSourceRegistration"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created. Contains the resource URI of the created Registration"
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Already exists",
+            "content": {
+              "application/json;application/ld+json": {
+                "schema": {
+                  "$ref": "http://localhost:8090/schema/common.json#/definitions/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

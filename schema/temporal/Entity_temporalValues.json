@@ -86,16 +86,16 @@
       "format": "uri"
     },
     "type": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/Name"
+      "$ref": "http://localhost:8090/schema/common.json#/definitions/Name"
     },
     "@context": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/LdContext"
+      "$ref": "http://localhost:8090/schema/common.json#/definitions/LdContext"
     },
     "createdAt": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/createdAt"
+      "$ref": "http://localhost:8090/schema/common.json#/definitions/createdAt"
     },
     "modifiedAt": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/modifiedAt"
+      "$ref": "http://localhost:8090/schema/common.json#/definitions/modifiedAt"
     }
   },
   "required": [
