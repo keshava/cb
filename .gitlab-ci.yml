@@ -13,8 +13,8 @@ test:
   stage: test
   script:
   # clean all dangaling containers
-   - docker kill $(docker ps -q)
-   - docker rm $(docker ps -a -q)
+   - sudo docker kill $(docker ps -q)
+   - sudo docker rm $(docker ps -a -q)
    - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master http://localhost:8090
    - docker run --rm -d -v ${PWD}/:/ngsi  -e FOLDER=/ngsi  -p 8090:8080 halverneus/static-file-server
    - docker run --network host -i -v ${PWD}/:/data wistefan/redocly-openapi-cli bundle /data/spec/updated/ngsi-ld-spec-open-api.json -o /data/spec/updated/full_api.json
