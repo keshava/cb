@@ -13,7 +13,7 @@ test:
   stage: test
   script:
    - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master http://localhost:8090
-   - docker run --name spec-server --rm -d -v ${PWD}/:/ngsi  -e FOLDER=/ngsi  -p 8090:8080 halverneus/static-file-server
+   - docker run --rm -d -v ${PWD}/:/ngsi  -e FOLDER=/ngsi  -p 8090:8080 halverneus/static-file-server
    - docker run --network host -i -v ${PWD}/:/data wistefan/redocly-openapi-cli bundle /data/spec/updated/ngsi-ld-spec-open-api.json -o /data/spec/updated/full_api.json
    - docker run --network host --rm -v ${PWD}/:/local openapitools/openapi-generator-cli validate -i /local/spec/updated/full_api.json
    - scripts/setBasePath.sh http://localhost:8090 https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master
