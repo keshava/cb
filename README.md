@@ -22,9 +22,9 @@ it replaces all paths to the master branch inside [spec](spec) and [schema](sche
 references are resolved with 'https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master' and therefore changes will not be present locally.
 
 With the local file-server still running, you can build the bundled api via:
-TODO:  change to openapi-cli image -> https://github.com/Redocly/openapi-cli/pull/247/files
+
 ```
-docker run --network host -it -v ${PWD}/:/data broothie/redoc-cli bundle spec/updated/ngsi-ld-spec-open-api.json -o spec/updated/generated/full_api.json
+docker run --network host -it -v  ${PWD}/:/data wistefan/redocly-openapi-cli bundle /data/spec/updated/ngsi-ld-spec-open-api.json -o /data/spec/updated/generated/full_api.json
 ```
 And validate it with:
 ```
