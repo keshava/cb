@@ -16,7 +16,7 @@ test-pr:
     - echo $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
     - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
     - docker run -i -v ${PWD}/:/data wistefan/redocly-openapi-cli bundle /data/spec/updated/ngsi-ld-spec-open-api.json -o /data/spec/updated/full_api.json
-- docker run --rm -v ${PWD}/:/local openapitools/openapi-generator-cli validate -i /local/spec/updated/full_api.json
+    - docker run --rm -v ${PWD}/:/local openapitools/openapi-generator-cli validate -i /local/spec/updated/full_api.json
   allow_failure: false
 
 test-branch:
