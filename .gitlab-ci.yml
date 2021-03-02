@@ -13,7 +13,6 @@ test-pr:
   only: [ merge_requests ]
   stage: test
   script:
-    - echo $(CI_MERGE_REQUEST_SOURCE_BRANCH_NAME)
     - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
     - docker run -i -v ${PWD}/:/data wistefan/redocly-openapi-cli bundle /data/spec/updated/ngsi-ld-spec-open-api.json -o /data/spec/updated/full_api.json
     - docker run --rm -v ${PWD}/:/local openapitools/openapi-generator-cli validate -i /local/spec/updated/full_api.json
@@ -23,9 +22,7 @@ test-branch:
   only: [ branches ]
   stage: test
   script:
-    - echo $CI_JOB_STAGE
-    - echo $CI_COMMIT_REF_NAME
-    - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master  https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/$CI_COMMIT_BRANCH
+    - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master  https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/$CI_COMMIT_REF_NAME
     - docker run -i -v ${PWD}/:/data wistefan/redocly-openapi-cli bundle /data/spec/updated/ngsi-ld-spec-open-api.json -o /data/spec/updated/full_api.json
     - docker run --rm -v ${PWD}/:/local openapitools/openapi-generator-cli validate -i /local/spec/updated/full_api.json
   allow_failure: false
