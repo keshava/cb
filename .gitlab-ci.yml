@@ -9,15 +9,20 @@ before_script:
 stages:
   - test
 
-test:
+test-pr:
+  only: [ merge_requests ]
   stage: test
   script:
-   - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master http://localhost:9090
-   - docker run --name fileserver --rm -d -v ${PWD}/:/ngsi  -e FOLDER=/ngsi  -p 9090:8080 halverneus/static-file-server
-   - docker run --network host -i -v ${PWD}/:/data wistefan/redocly-openapi-cli bundle /data/spec/updated/ngsi-ld-spec-open-api.json -o /data/spec/updated/full_api.json
-   - docker run --network host --rm -v ${PWD}/:/local openapitools/openapi-generator-cli validate -i /local/spec/updated/full_api.json
-   - scripts/setBasePath.sh http://localhost:8090 https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master
-  after_script:
-   - docker stop fileserver
+   - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME http://localhost:9090
+   - docker run -i -v ${PWD}/:/data wistefan/redocly-openapi-cli bundle /data/spec/updated/ngsi-ld-spec-open-api.json -o /data/spec/updated/full_api.json
+   - docker run --rm -v ${PWD}/:/local openapitools/openapi-generator-cli validate -i /local/spec/updated/full_api.json
   allow_failure: false
 
+test-branch:
+  only: [ branches ]
+  stage: test
+  script:
+    - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/$CI_COMMIT_BRANCH http://localhost:9090
+    - docker run -i -v ${PWD}/:/data wistefan/redocly-openapi-cli bundle /data/spec/updated/ngsi-ld-spec-open-api.json -o /data/spec/updated/full_api.json
+    - docker run --rm -v ${PWD}/:/local openapitools/openapi-generator-cli validate -i /local/spec/updated/full_api.json
+  allow_failure: false
