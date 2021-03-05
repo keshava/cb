@@ -3,14 +3,16 @@ before_script:
   - docker info
 
 stages:
+  - prepare
   - test
 
 build:
-  stage: test
+  stage: prepare
   image: docker:19.03.12
   script:
     - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master http://localhost:8080
     - docker build -t ngsi-local -f docker/Dockerfile .
+  allow_failure: false
 
 test:
   stage: test
@@ -19,11 +21,9 @@ test:
     - image: ngsi-local
       environment:
         - FOLDER=/ngsi
-  needs:
-    - job:build
   script:
-   - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master http://localhost:9090
-   - docker run --network host -i -v ${PWD}/:/data wistefan/redocly-openapi-cli bundle /data/spec/updated/ngsi-ld-spec-open-api.json -o /data/spec/updated/full_api.json
-   - docker run --network host --rm -v ${PWD}/:/local openapitools/openapi-generator-cli validate -i /local/spec/updated/full_api.json
+    - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master http://localhost:9090
+    - docker run --network host -i -v ${PWD}/:/data wistefan/redocly-openapi-cli bundle /data/spec/updated/ngsi-ld-spec-open-api.json -o /data/spec/updated/full_api.json
+    - docker run --network host --rm -v ${PWD}/:/local openapitools/openapi-generator-cli validate -i /local/spec/updated/full_api.json
   allow_failure: false
 
