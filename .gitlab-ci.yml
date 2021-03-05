@@ -5,18 +5,25 @@ before_script:
 stages:
   - test
 
+build:
+  stage: test
+  image: docker:19.03.12
+  script:
+    - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master http://localhost:8080
+    - docker build -t ngsi-local -f docker/Dockerfile .
+
 test:
   stage: test
   image: docker:19.03.12
-#  needs:
-#    - job:build
+  services:
+    - image: ngsi-local
+      environment:
+        - FOLDER=/ngsi
+  needs:
+    - job:build
   script:
    - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master http://localhost:9090
-   - docker run --name fileserver --rm -d -v ${PWD}/:/ngsi  -e FOLDER=/ngsi  -p 9090:8080 halverneus/static-file-server
    - docker run --network host -i -v ${PWD}/:/data wistefan/redocly-openapi-cli bundle /data/spec/updated/ngsi-ld-spec-open-api.json -o /data/spec/updated/full_api.json
    - docker run --network host --rm -v ${PWD}/:/local openapitools/openapi-generator-cli validate -i /local/spec/updated/full_api.json
-   - scripts/setBasePath.sh http://localhost:8090 https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master
-  after_script:
-   - docker stop fileserver
   allow_failure: false
 
