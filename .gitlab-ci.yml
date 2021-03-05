@@ -28,7 +28,7 @@ test:
     - git add -f ${PWD}/spec/updated/generated/full_api.json
     - git commit -m "Update bundled spec." || echo "No changes, nothing to commit!"
     - url_host=`git remote get-url origin | sed -e "s/https:\/\/gitlab-ci-token:.*@//g"`
-    - git remote set-url origin "https://gitlab-ci-token:${GIT_PUSH_TOKEN}@${url_host}"
+    - git remote set-url origin "https://gitlab-ci-token:$GIT_PUSH_TOKEN@${url_host}"
     - git push origin HEAD:$CI_COMMIT_REF_NAME
   allow_failure: false
 
