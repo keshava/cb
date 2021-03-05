@@ -27,6 +27,6 @@ test:
     - git config --global user.name "Gitlab runner"
     - git add -f ${PWD}/spec/updated/generated/full_api.json
     - git commit -m "Update bundled spec." || echo "No changes, nothing to commit!"
-    - git push
+    - git push origin HEAD:$CI_COMMIT_REF_NAME
   allow_failure: false
 
