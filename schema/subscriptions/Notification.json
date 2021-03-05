@@ -1,6 +1,4 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/subscriptions/Notification.json",
   "title": "NGSI-LD Notification",
   "description": "NGSI-LD Notification",
   "type": "object",
@@ -11,7 +9,9 @@
     },
     "type": {
       "type": "string",
-      "const": "Notification"
+      "enum": [
+        "Notification"
+      ]
     },
     "subscriptionId": {
       "type": "string",

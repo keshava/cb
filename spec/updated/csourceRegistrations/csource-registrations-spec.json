@@ -13,37 +13,37 @@
       "get": {
         "description": "Retrieve a set of context sources which matches a specific query from an NGSI-LD system",
         "operationId": "queryCsources",
-        "tags": ["Context Sources"],
+        "tags": ["Context Sources", "CSourceRegistrations"],
         "parameters": [
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/id"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/id"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/idPattern"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/idPattern"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/type"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/type"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/attrs"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/attrs"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/q"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/q"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/georel"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/georel"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/geometry"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/geometry"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/coordinates"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/coordinates"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/geoproperty"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/geoproperty"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/components/parameters/limit"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/components/parameters/limit"
           }
         ],
         "responses": {
@@ -77,7 +77,7 @@
       "post": {
         "description": "Registers a new context source within an NGSI-LD system",
         "operationId": "registerCsource",
-        "tags": ["Context Sources"],
+        "tags": ["Context Sources", "CSourceRegistrations"],
         "requestBody": {
           "required": true,
           "content": {

@@ -48,46 +48,46 @@
   ],
   "paths": {
     "/entities/": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities-spec.json#/paths/%2Fentities%2F"
+      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entities-spec.json#/paths/%2Fentities%2F"
     },
     "/entities/{entityId}": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/paths/%2Fentities%2F%7BentityId%7D"
+      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entity-by-id-spec.json#/paths/%2Fentities%2F%7BentityId%7D"
     },
     "/entities/{entityId}/attrs/": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-attrs-spec.json#/paths/%2Fentities%2F%7BentityId%7D%2Fattrs%2F"
+      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entity-attrs-spec.json#/paths/%2Fentities%2F%7BentityId%7D%2Fattrs%2F"
     },
     "/entities/{entityId}/attrs/{attrId}": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-attrs-spec.json#/paths/%2Fentities%2F%7BentityId%7D%2Fattrs%2F%7BattrId%7D"
+      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entity-attrs-spec.json#/paths/%2Fentities%2F%7BentityId%7D%2Fattrs%2F%7BattrId%7D"
     },
     "/subscriptions/": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/subscriptions-spec.json#/paths/%2Fsubscriptions%2F"
+      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/subscriptions/subscriptions-spec.json#/paths/%2Fsubscriptions%2F"
     },
     "/subscriptions/{subscriptionId}": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/subscription-by-id-spec.json#/paths/%2Fsubscriptions%2F%7BsubscriptionId%7D"
+      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/subscriptions/subscription-by-id-spec.json#/paths/%2Fsubscriptions%2F%7BsubscriptionId%7D"
     },
     "/csourceRegistrations/": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/csource-registrations-spec.json#/paths/%2FcsourceRegistrations%2F"  
+      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/csourceRegistrations/csource-registrations-spec.json#/paths/%2FcsourceRegistrations%2F"
     },
     "/csourceRegistrations/{registrationId}": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/csource-registration-by-id-spec.json#/paths/%2FcsourceRegistrations%2F%7BregistrationId%7D"  
+      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/csourceRegistrations/csource-registration-by-id-spec.json#/paths/%2FcsourceRegistrations%2F%7BregistrationId%7D"
     },
     "/csourceSubscriptions/": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/csource-subscriptions-spec.json#/paths/%2FcsourceSubscriptions%2F"  
+      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/csourceSubscriptions/csource-subscriptions-spec.json#/paths/%2FcsourceSubscriptions%2F"
     },
     "/csourceSubscriptions/{subscriptionId}": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/csource-subscription-by-id-spec.json#/paths/%2FcsourceSubscriptions%2F%7BsubscriptionId%7D"  
+      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/csourceSubscriptions/csource-subscription-by-id-spec.json#/paths/%2FcsourceSubscriptions%2F%7BsubscriptionId%7D"
     },
     "/entityOperations/create": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-operations-spec.json#/paths/%2FentityOperations%2Fcreate"  
+      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entity-operations-spec.json#/paths/%2FentityOperations%2Fcreate"
     },
     "/entityOperations/update": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-operations-spec.json#/paths/%2FentityOperations%2Fupdate"  
+      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entity-operations-spec.json#/paths/%2FentityOperations%2Fupdate"
     },
     "/entityOperations/upsert": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-operations-spec.json#/paths/%2FentityOperations%2Fupsert"  
+      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entity-operations-spec.json#/paths/%2FentityOperations%2Fupsert"
     },
     "/entityOperations/delete": {
-      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-operations-spec.json#/paths/%2FentityOperations%2Fdelete"  
+      "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entity-operations-spec.json#/paths/%2FentityOperations%2Fdelete"
     },
     "/temporal/entities/": {
       "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entities-spec.json#/paths/%2Ftemporal%2Fentities%2F"  

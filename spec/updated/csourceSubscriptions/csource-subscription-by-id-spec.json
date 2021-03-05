@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "NGSI-LD Subscription By Id",
+    "title": "NGSI-LD Context Source Subscription By Id",
     "version": "latest"
   },
   "components": {
@@ -19,11 +19,11 @@
     }
   },
   "paths": {
-    "/subscriptions/{subscriptionId}": {
+    "/csourceSubscriptions/{subscriptionId}": {
       "get": {
          "description": "Retrieves a specific Subscription from an NGSI-LD system",
-         "operationId": "retrieveSubscription",
-         "tags": ["Context Subscription"],
+         "operationId": "retrieveCSourceSubscriptionsById",
+         "tags": ["Context Sources", "CSourceSubscriptions"],
         "parameters": [
           {
             "$ref": "#/components/parameters/subscriptionId"
@@ -68,9 +68,9 @@
         }
       },
       "patch": {
-        "description": "Updates a specific Subscription within an NGSI-LD system",
-        "operationId": "updateSubscription",
-        "tags": ["Context Subscription"],
+        "description": "Updates a specific context source discovery Subscription within an NGSI-LD system",
+        "operationId": "updateCSourceSubscription",
+        "tags": ["Context Sources", "CSourceSubscriptions"],
         "parameters": [
           {
             "$ref": "#/components/parameters/subscriptionId"
@@ -113,9 +113,9 @@
         }
       },
       "delete": {
-        "description": "Removes a specific Subscription from an NGSI-LD system",
-        "operationId": "removeSubscription",
-        "tags": ["Context Subscription"],
+        "description": "Removes a specific Context Source Subscription from an NGSI-LD system",
+        "operationId": "removeCSourceSubscription",
+        "tags": ["Context Sources", "CSourceSubscriptions"],
         "parameters": [
           {
             "$ref": "#/components/parameters/subscriptionId"

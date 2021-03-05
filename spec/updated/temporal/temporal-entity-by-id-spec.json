@@ -11,16 +11,16 @@
       "get": {
         "description": "Retrieve the temporal representation of an specific Entity from an NGSI-LD system. It's possible to specify the Entity attributes to be retrieved by using query parameters",
         "operationId": "retrieveEntityTemporalById",
-        "tags": ["Temporal Evolution"],
+        "tags": ["Temporal Evolution", "Temporal"],
         "parameters": [
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/entityId"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entity-by-id-spec.json#/components/parameters/entityId"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/attrs"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entity-by-id-spec.json#/components/parameters/attrs"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/type"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entity-by-id-spec.json#/components/parameters/type"
           },  
           {
             "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/temporal/temporal-entities-spec.json#/components/parameters/options"
@@ -82,13 +82,13 @@
       "delete": {
         "description": "Removes the temporal representation of an Entity from an NGSI-LD system",
         "operationId": "removeEntityTemporalById",
-        "tags": ["Temporal Evolution"],
+        "tags": ["Temporal Evolution", "Temporal"],
         "parameters": [
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/entityId"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entity-by-id-spec.json#/components/parameters/entityId"
           },
           {
-            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entity-by-id-spec.json#/components/parameters/type"
+            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/entities/entity-by-id-spec.json#/components/parameters/type"
           }
         ],
         "responses": {

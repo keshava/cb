@@ -6,11 +6,11 @@
   },
   "components": {},
   "paths": {
-    "/entityOperations/create/": {
+    "/entityOperations/create": {
       "post": {
         "description": "Batch Entity creation",
         "operationId": "batchEntityCreation",
-        "tags": ["Batch Operations"],
+        "tags": ["Batch Operations", "Entities"],
         "requestBody": {
           "required": true,
           "content": {
@@ -45,11 +45,11 @@
         }
       }
     },
-    "/entityOperations/update/": {
+    "/entityOperations/update": {
       "post": {
         "description": "Batch Entity update",
         "operationId": "batchEntityUpdate",
-        "tags": ["Batch Operations"],
+        "tags": ["Batch Operations", "Entities"],
         "parameters": [
           {
             "name": "options",
@@ -97,11 +97,11 @@
         }
       }
     },
-    "/entityOperations/upsert/": {
+    "/entityOperations/upsert": {
       "post": {
         "description": "Batch Entity upsert",
         "operationId": "batchEntityUpsert",
-        "tags": ["Batch Operations"],
+        "tags": ["Batch Operations", "Entities"],
         "parameters": [
           {
             "name": "options",
@@ -150,11 +150,11 @@
         }
       }
     },
-    "/entityOperations/delete/": {
+    "/entityOperations/delete": {
       "post": {
         "description": "Batch Entity delete",
         "operationId": "batchEntityDelete",
-        "tags": ["Batch Operations"],
+        "tags": ["Batch Operations", "Entities"],
         "requestBody": {
           "required": true,
           "content": {

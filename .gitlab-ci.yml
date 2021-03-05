@@ -1,24 +1,29 @@
-# This file is a template, and might need editing before it works on your project.
-# Official framework image. Look for the different tagged releases at:
-# https://hub.docker.com/r/library/node/tags/
-image: node::13.7-alpine
-
-# This folder is cached between builds
-# http://docs.rep.com/ce/ci/yaml/README.html#cache
-cache:
-  paths:
-  - node_modules/
 
 before_script:
-  - yarn
+  - docker info
 
 stages:
+  - prepare
   - test
+
+build:
+  stage: prepare
+  image: docker:19.03.12
+  script:
+    - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master http://localhost:8080
+    - docker build -t ngsi-local -f docker/Dockerfile .
+  allow_failure: false
 
 test:
   stage: test
+  image: docker:19.03.12
+  services:
+    - ngsi-local
   script:
-   - echo "Running tests..."   
-   - yarn test
-  allow_failure: true
+    - echo ${TEST}
+    - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master http://localhost:9090
+    - docker run --network host -i -v ${PWD}/:/data wistefan/redocly-openapi-cli bundle /data/spec/updated/ngsi-ld-spec-open-api.json -o /data/spec/updated/generated/full_api.json
+    - docker run --network host --rm -v ${PWD}/:/local openapitools/openapi-generator-cli validate -i /local/spec/updated/generated/full_api.json
+  allow_failure: false
 
+# TODO: after gitlab update, the ci should publish the bundled api

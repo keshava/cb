@@ -42,7 +42,7 @@
       "post": {
         "description": "Add new attributes to an existing Temporal Entity within an NGSI-LD system",
         "operationId": "addTemporalEntityAttrs",
-        "tags": ["Temporal Evolution"],
+        "tags": ["Temporal Evolution", "Temporal"],
         "parameters": [
           {
             "$ref": "#/components/parameters/entityId"
@@ -89,7 +89,7 @@
       "delete": {
         "description": "Attribute from Temporal Representation of Entity deletion",
         "operationId": "removeEntityTemporalAttr",
-         "tags": ["Temporal Evolution"],
+         "tags": ["Temporal Evolution", "Temporal"],
         "parameters": [
           {
             "$ref": "#/components/parameters/entityId"
@@ -129,7 +129,7 @@
       "patch": {
         "description": "Allows modifying a specific Attribute (Property or Relationship) instance, identified by its instanceId, of a Temporal Representation of an Entity.",
         "operationId": "modifyEntityTemporalAttrInstance",
-        "tags": ["Temporal Evolution"],
+        "tags": ["Temporal Evolution", "Temporal"],
         "parameters": [
           {
             "$ref": "#/components/parameters/entityId"
@@ -180,7 +180,7 @@
       "delete": {
         "description": "Attribute Instance deletion by instance id.",
         "operationId": "removeEntityTemporalAttrInstance",
-        "tags": ["Temporal Evolution"],
+        "tags": ["Temporal Evolution", "Temporal"],
         "parameters": [
           {
             "$ref": "#/components/parameters/entityId"

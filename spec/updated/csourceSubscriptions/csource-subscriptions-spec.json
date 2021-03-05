@@ -23,7 +23,7 @@
       "get": {
         "description": "Retrieves the context source discovery subscriptions available in an NGSI-LD system",
         "operationId": "retrieveCSourceSubscriptions",
-        "tags": ["Context Sources"],
+        "tags": ["Context Sources", "CSourceSubscriptions"],
         "parameters": [
           {
             "$ref": "#/components/parameters/limit"
@@ -60,7 +60,7 @@
       "post": {
         "description": "Creates a context source discovery Subscription within an NGSI-LD system",
         "operationId": "createCSourceSubscription",
-        "tags": ["Context Sources"],
+        "tags": ["Context Sources", "CSourceSubscriptions"],
         "requestBody": {
           "required": true,
           "content": {

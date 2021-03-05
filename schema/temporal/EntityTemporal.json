@@ -1,6 +1,4 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/temporal/EntityTemporal.json",
   "title": "NGSI-LD Entity",
   "description": "NGSI-LD Temporal Representation of an Entity",
   "definitions": {
@@ -46,7 +44,7 @@
         }
       },
       "additionalProperties": {
-        "anyOf": [
+        "oneOf": [
           {
             "type": "array",
             "items": {
@@ -69,22 +67,19 @@
             "minItems": 1
           }
         ]
-      },
-      "propertyNames": {
-        "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/common.json#/definitions/PropertyNames"
       }
     },
     "EntityTemporal": {
       "allOf": [
         {
-          "type": "object",
-          "required": [
-            "id",
-            "type"
-          ]
+          "$ref": "#/definitions/EntityTemporalFragment"
         },
         {
-          "$ref": "#/definitions/EntityTemporalFragment"
+          "type": "object",
+          "required": [
+            "type",
+            "id"
+          ]
         }
       ]
     }

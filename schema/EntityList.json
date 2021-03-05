@@ -1,6 +1,4 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/EntityList.json",
   "title": "NGSI-LD EntityList",
   "description": "NGSI-LD EntityList",
   "definitions": {
@@ -11,7 +9,9 @@
       }
     }
   },
-  "allOf": [{
-    "$ref": "#/definitions/EntityList"
-  }]
+  "allOf": [
+    {
+      "$ref": "#/definitions/EntityList"
+    }
+  ]
 }
