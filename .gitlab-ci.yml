@@ -19,14 +19,6 @@ test:
   image: docker:19.03.12
   services:
     - ngsi-local
-  before_script:
-    - 'which ssh-agent || ( apt-get update -qy && apt-get install openssh-client -qqy )'
-    - eval `ssh-agent -s`
-    - echo "${SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add - > /dev/null # add ssh ke
-    - mkdir -p ~/.ssh
-    - chmod 700 ~/.ssh
-    - echo "$SSH_PUBLIC_KEY" >> ~/.ssh/id_rsa.pub
-    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
   script:
     - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master http://localhost:9090
     - docker run --network host -i -v ${PWD}/:/data wistefan/redocly-openapi-cli bundle /data/spec/updated/ngsi-ld-spec-open-api.json -o /data/spec/updated/generated/full_api.json
