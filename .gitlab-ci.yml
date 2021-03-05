@@ -18,9 +18,7 @@ test:
   stage: test
   image: docker:19.03.12
   services:
-    - image: ngsi-local
-      environment:
-        - FOLDER=/ngsi
+    - ngsi-local
   script:
     - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master http://localhost:9090
     - docker run --network host -i -v ${PWD}/:/data wistefan/redocly-openapi-cli bundle /data/spec/updated/ngsi-ld-spec-open-api.json -o /data/spec/updated/full_api.json
