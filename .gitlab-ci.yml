@@ -24,7 +24,7 @@ test:
     - docker run --network host -i -v ${PWD}/:/data wistefan/redocly-openapi-cli bundle /data/spec/updated/ngsi-ld-spec-open-api.json -o /data/spec/updated/generated/full_api.json
     - docker run --network host --rm -v ${PWD}/:/local openapitools/openapi-generator-cli validate -i /local/spec/updated/generated/full_api.json
     - echo ${PWD}
-    - ls /spec/updated/generated/
+    - ls ${PWD}/spec/updated/generated/
     - git config --global user.name "${CI_DEPLOY_USER}"
     - git add -f ${PWD}/spec/updated/generated/full_api.json
     - git commit -m "Update bundled spec." || echo "No changes, nothing to commit!"
