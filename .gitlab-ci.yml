@@ -24,12 +24,6 @@ test:
     - scripts/setBasePath.sh https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master http://localhost:9090
     - docker run --network host -i -v ${PWD}/:/data wistefan/redocly-openapi-cli bundle /data/spec/updated/ngsi-ld-spec-open-api.json -o /data/spec/updated/generated/full_api.json
     - docker run --network host --rm -v ${PWD}/:/local openapitools/openapi-generator-cli validate -i /local/spec/updated/generated/full_api.json
-    - git config --global user.email "ci@etsi.org"
-    - git config --global user.name "Gitlab runner"
-    - git add -f ${PWD}/spec/updated/generated/full_api.json
-    - git commit -m "Update bundled spec." || echo "No changes, nothing to commit!"
-    - url_host=`git remote get-url origin | sed -e "s/https:\/\/gitlab-ci-token:.*@//g"`
-    - git remote set-url origin "https://gitlab-ci-token:$GIT_PUSH_TOKEN@${url_host}"
-    - git push origin HEAD:$CI_COMMIT_REF_NAME
   allow_failure: false
 
+# TODO: after gitlab update, the ci should publish the bundled api
