@@ -4,7 +4,7 @@ This repository contains OpenAPI descriptions for the NGSI-LD interface defined 
 
 ## Online resources
 
-* [Navigate the API in the browser](https://forge.etsi.org/swagger/ui/?url=https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/full_api.json).
+* [Navigate the API in the browser](https://forge.etsi.org/swagger/ui/?url=https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/spec/updated/generated/full_api.json).
 
 ## Contribute
 
