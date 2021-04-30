@@ -202,10 +202,6 @@
       "@id": "ngsi-ld:sumsq",
       "@container": "@list"
     },
-    "totalCount": {
-      "@id": "ngsi-ld:totalCount",
-      "@container": "@list"
-    },
     "temporalQ": "ngsi-ld:temporalQ",
 	"tenant": {
       "@id": "ngsi-ld:tenant",
@@ -221,6 +217,10 @@
     "timerel": "ngsi-ld:timerel",
     "timesSent": "ngsi-ld:timesSent",
     "title": "http://purl.org/dc/terms/title",
+    "totalCount": {
+      "@id": "ngsi-ld:totalCount",
+      "@container": "@list"
+    },
     "triggerReason": "ngsi-ld:triggerReason",
     "typeList": {
       "@id": "ngsi-ld:typeList",
