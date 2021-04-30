@@ -178,7 +178,7 @@
       "@type": "@id"
     },
     "temporalQ": "ngsi-ld:temporalQ",
-	"tenant": {
+    "tenant": {
       "@id": "ngsi-ld:tenant",
       "@type": "@id"
     },
