@@ -1,23 +1,26 @@
 {
   "@context": {
+
     "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
     "geojson": "https://purl.org/geojson/vocab#",
     "id": "@id",
     "type": "@type",
-    "Attribute": "ngsi-ld:Attribute",
-    "AttributeList": "ngsi-ld:AttributeList",
+
+	"Attribute": "ngsi-ld:Attribute",
+	"AttributeList": "ngsi-ld:AttributeList",
     "ContextSourceNotification": "ngsi-ld:ContextSourceNotification",
     "ContextSourceRegistration": "ngsi-ld:ContextSourceRegistration",
     "Date": "ngsi-ld:Date",
     "DateTime": "ngsi-ld:DateTime",
-    "EntityType": "ngsi-ld:EntityType",
-    "EntityTypeInfo": "ngsi-ld:EntityTypeInfo",
-    "EntityTypeList": "ngsi-ld:EntityTypeList",
+	"EntityType": "ngsi-ld:EntityType",
+	"EntityTypeInfo": "ngsi-ld:EntityTypeInfo",
+	"EntityTypeList": "ngsi-ld:EntityTypeList",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeoProperty": "ngsi-ld:GeoProperty",
     "GeometryCollection": "geojson:GeometryCollection",
     "LineString": "geojson:LineString",
+	"LanguageProperty": "ngsi-ld:LanguageProperty",
     "MultiLineString": "geojson:MultiLineString",
     "MultiPoint": "geojson:MultiPoint",
     "MultiPolygon": "geojson:MultiPolygon",
@@ -29,17 +32,18 @@
     "Subscription": "ngsi-ld:Subscription",
     "TemporalProperty": "ngsi-ld:TemporalProperty",
     "Time": "ngsi-ld:Time",
+
     "accept": "ngsi-ld:accept",
-    "attributeCount": "attributeCount",
-    "attributeDetails": "attributeDetails",
+	"attributeCount": "attributeCount",
+	"attributeDetails": "attributeDetails",
     "attributeList": {
       "@id": "ngsi-ld:attributeList",
       "@type": "@vocab"
     },
     "attributeName": {
-      "@id": "ngsi-ld:attributeName",
+	  "@id": "ngsi-ld:attributeName"
       "@type": "@vocab"
-    },
+	},
     "attributeNames": {
       "@id": "ngsi-ld:attributeNames",
       "@type": "@vocab"
@@ -76,7 +80,7 @@
     },
     "description": "http://purl.org/dc/terms/description",
     "detail": "ngsi-ld:detail",
-    "distinctCount": {
+        "distinctCount": {
       "@id": "ngsi-ld:distinctCount",
       "@container": "@list"
     },
@@ -117,6 +121,11 @@
       "@type": "@id"
     },
     "isActive": "ngsi-ld:isActive",
+	"lang": "ngsi-ld:lang",
+	"languageMap": ": {
+      "@id": "ngsi-ld:hasLanguageMap",
+      "@container": "@language"
+    },
     "lastFailure": {
       "@id": "ngsi-ld:lastFailure",
       "@type": "DateTime"
@@ -131,7 +140,7 @@
     },
     "location": "ngsi-ld:location",
     "managementInterval": "ngsi-ld:managementInterval",
-    "max": {
+        "max": {
       "@id": "ngsi-ld:max",
       "@container": "@list"
     },
@@ -181,7 +190,7 @@
       "@type": "DateTime"
     },
     "status": "ngsi-ld:status",
-    "stddev": {
+        "stddev": {
       "@id": "ngsi-ld:stddev",
       "@container": "@list"
     },
@@ -194,7 +203,7 @@
       "@id": "ngsi-ld:success",
       "@type": "@id"
     },
-    "sum": {
+        "sum": {
       "@id": "ngsi-ld:sum",
       "@container": "@list"
     },
@@ -203,7 +212,7 @@
       "@container": "@list"
     },
     "temporalQ": "ngsi-ld:temporalQ",
-    "tenant": {
+	"tenant": {
       "@id": "ngsi-ld:tenant",
       "@type": "@id"
     },
@@ -216,13 +225,13 @@
     "timeproperty": "ngsi-ld:timeproperty",
     "timerel": "ngsi-ld:timerel",
     "timesSent": "ngsi-ld:timesSent",
-    "title": "http://purl.org/dc/terms/title",
-    "totalCount": {
+	"title": "http://purl.org/dc/terms/title",
+        "totalCount": {
       "@id": "ngsi-ld:totalCount",
       "@container": "@list"
     },
     "triggerReason": "ngsi-ld:triggerReason",
-    "typeList": {
+	"typeList": {
       "@id": "ngsi-ld:typeList",
       "@type": "@vocab"
     },
