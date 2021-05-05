@@ -41,7 +41,7 @@
       "@type": "@vocab"
     },
     "attributeName": {
-      "@id": "ngsi-ld:attributeName"
+      "@id": "ngsi-ld:attributeName",
       "@type": "@vocab"
 	},
     "attributeNames": {
@@ -122,7 +122,7 @@
     },
     "isActive": "ngsi-ld:isActive",
     "lang": "ngsi-ld:lang",
-    "languageMap": ": {
+    "languageMap": {
       "@id": "ngsi-ld:hasLanguageMap",
       "@container": "@language"
     },
