@@ -12,9 +12,9 @@
     "ContextSourceRegistration": "ngsi-ld:ContextSourceRegistration",
     "Date": "ngsi-ld:Date",
     "DateTime": "ngsi-ld:DateTime",
-	"EntityType": "ngsi-ld:EntityType",
-	"EntityTypeInfo": "ngsi-ld:EntityTypeInfo",
-	"EntityTypeList": "ngsi-ld:EntityTypeList",
+    "EntityType": "ngsi-ld:EntityType",
+    "EntityTypeInfo": "ngsi-ld:EntityTypeInfo",
+    "EntityTypeList": "ngsi-ld:EntityTypeList",
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeoProperty": "ngsi-ld:GeoProperty",
@@ -34,14 +34,14 @@
     "Time": "ngsi-ld:Time",
 
     "accept": "ngsi-ld:accept",
-	"attributeCount": "attributeCount",
-	"attributeDetails": "attributeDetails",
+    "attributeCount": "attributeCount",
+    "attributeDetails": "attributeDetails",
     "attributeList": {
       "@id": "ngsi-ld:attributeList",
       "@type": "@vocab"
     },
     "attributeName": {
-	  "@id": "ngsi-ld:attributeName"
+      "@id": "ngsi-ld:attributeName"
       "@type": "@vocab"
 	},
     "attributeNames": {
@@ -80,7 +80,7 @@
     },
     "description": "http://purl.org/dc/terms/description",
     "detail": "ngsi-ld:detail",
-        "distinctCount": {
+    "distinctCount": {
       "@id": "ngsi-ld:distinctCount",
       "@container": "@list"
     },
@@ -140,7 +140,7 @@
     },
     "location": "ngsi-ld:location",
     "managementInterval": "ngsi-ld:managementInterval",
-        "max": {
+    "max": {
       "@id": "ngsi-ld:max",
       "@container": "@list"
     },
@@ -190,7 +190,7 @@
       "@type": "DateTime"
     },
     "status": "ngsi-ld:status",
-        "stddev": {
+    "stddev": {
       "@id": "ngsi-ld:stddev",
       "@container": "@list"
     },
@@ -203,7 +203,7 @@
       "@id": "ngsi-ld:success",
       "@type": "@id"
     },
-        "sum": {
+    "sum": {
       "@id": "ngsi-ld:sum",
       "@container": "@list"
     },
@@ -226,12 +226,12 @@
     "timerel": "ngsi-ld:timerel",
     "timesSent": "ngsi-ld:timesSent",
 	"title": "http://purl.org/dc/terms/title",
-        "totalCount": {
+    "totalCount": {
       "@id": "ngsi-ld:totalCount",
       "@container": "@list"
     },
     "triggerReason": "ngsi-ld:triggerReason",
-	"typeList": {
+    "typeList": {
       "@id": "ngsi-ld:typeList",
       "@type": "@vocab"
     },
