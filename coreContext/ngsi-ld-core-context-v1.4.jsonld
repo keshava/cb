@@ -6,8 +6,8 @@
     "id": "@id",
     "type": "@type",
 
-	"Attribute": "ngsi-ld:Attribute",
-	"AttributeList": "ngsi-ld:AttributeList",
+    "Attribute": "ngsi-ld:Attribute",
+    "AttributeList": "ngsi-ld:AttributeList",
     "ContextSourceNotification": "ngsi-ld:ContextSourceNotification",
     "ContextSourceRegistration": "ngsi-ld:ContextSourceRegistration",
     "Date": "ngsi-ld:Date",
@@ -20,7 +20,7 @@
     "GeoProperty": "ngsi-ld:GeoProperty",
     "GeometryCollection": "geojson:GeometryCollection",
     "LineString": "geojson:LineString",
-	"LanguageProperty": "ngsi-ld:LanguageProperty",
+    "LanguageProperty": "ngsi-ld:LanguageProperty",
     "MultiLineString": "geojson:MultiLineString",
     "MultiPoint": "geojson:MultiPoint",
     "MultiPolygon": "geojson:MultiPolygon",
@@ -121,8 +121,8 @@
       "@type": "@id"
     },
     "isActive": "ngsi-ld:isActive",
-	"lang": "ngsi-ld:lang",
-	"languageMap": ": {
+    "lang": "ngsi-ld:lang",
+    "languageMap": ": {
       "@id": "ngsi-ld:hasLanguageMap",
       "@container": "@language"
     },
@@ -212,7 +212,7 @@
       "@container": "@list"
     },
     "temporalQ": "ngsi-ld:temporalQ",
-	"tenant": {
+    "tenant": {
       "@id": "ngsi-ld:tenant",
       "@type": "@id"
     },
